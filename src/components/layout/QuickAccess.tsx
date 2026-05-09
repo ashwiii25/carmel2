@@ -48,12 +48,12 @@ export function QuickAccess() {
                   key={action.label}
                   href={action.href}
                   className={cn(
-                    "flex flex-col md:flex-row items-center gap-2 group transition-colors",
-                    action.primary ? "text-red-700" : "text-foreground hover:text-medical"
+                    "flex flex-col md:flex-row items-center gap-2 group transition-all duration-300",
+                    action.primary ? "text-[#D32F2F]" : "text-primary/70 hover:text-primary"
                   )}
                 >
-                  <Icon size={18} strokeWidth={1.5} className="group-hover:-translate-y-1 md:group-hover:translate-y-0 transition-transform" />
-                  <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1 md:mt-0">
+                  <Icon size={18} strokeWidth={2} className="group-hover:-translate-y-1 md:group-hover:translate-x-1 transition-transform" />
+                  <span className="text-[9px] md:text-xs font-bold uppercase tracking-wider">
                     {action.label}
                   </span>
                 </Link>

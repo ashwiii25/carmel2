@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -10,17 +10,20 @@ const inter = Inter({
   display: "swap",
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
   title: "Carmel Hospital | Excellence in Healthcare",
   description: "Experience premium, compassionate, and advanced medical care at Carmel Hospital, Aluva.",
 };
+
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export default function RootLayout({
   children,
@@ -30,10 +33,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} antialiased`}
+      className={`${inter.variable} ${lato.variable} antialiased`}
     >
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen font-sans bg-background text-foreground selection:bg-secondary selection:text-primary">
+        <Header />
         <SmoothScroll>{children}</SmoothScroll>
+        <Footer />
         <ScrollToTop />
       </body>
     </html>

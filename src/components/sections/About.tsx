@@ -17,8 +17,8 @@ export function About() {
               className="z-10 relative"
             >
               <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Our Legacy</h3>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl mb-12 leading-[0.95]">
-                A story of <span className="italic font-light opacity-60">healing</span> and hope.
+              <h2 className="text-4xl md:text-7xl lg:text-8xl mb-12 leading-[1.1]">
+                A story of <span className="opacity-80">healing</span> and hope.
               </h2>
               <div className="space-y-8 text-foreground/70 font-light text-lg leading-relaxed">
                 <p>
@@ -41,8 +41,8 @@ export function About() {
               className="col-span-8 aspect-[4/5] img-reveal border-thin shadow-xl"
             >
               <img 
-                src="/carmel_dept/Nursing-Department-580x360.webp" 
-                alt="Nursing Department"
+                src="/hero_slideshow/ey-doctors-in-discussion-in-hospital.webp" 
+                alt="Hospital Excellence"
                 className="w-full h-full object-cover"
               />
             </motion.div>

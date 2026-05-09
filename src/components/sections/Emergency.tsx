@@ -20,9 +20,9 @@ export function Emergency() {
             transition={{ duration: 1 }}
           >
             <h3 className="text-white/40 text-xs font-bold uppercase tracking-[0.3em] mb-8">Crisis Response</h3>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8">
+            <h2 className="text-4xl md:text-7xl lg:text-8xl leading-[1.1] mb-8">
               Critical care, <br />
-              <span className="italic font-light text-white/60">delivered.</span>
+              <span className="text-white/80">delivered.</span>
             </h2>
             <p className="text-white/70 text-lg font-light leading-relaxed max-w-xl">
               Equipped with a state-of-the-art trauma unit and a dedicated fleet of life-support ambulances, we ensure rapid intervention when seconds matter most.
@@ -42,7 +42,7 @@ export function Emergency() {
             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 mb-4">Emergency Hotline</p>
             <a 
               href="tel:+914842901000" 
-              className="text-4xl md:text-6xl font-serif tracking-tighter hover:text-secondary transition-colors duration-500"
+              className="text-3xl md:text-6xl font-bold tracking-tight hover:text-secondary transition-colors duration-500"
             >
               0484 290 1000
             </a>

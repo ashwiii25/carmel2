@@ -16,8 +16,8 @@ export function Contact() {
             transition={{ duration: 1 }}
           >
             <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Access</h3>
-            <h2 className="text-5xl md:text-7xl leading-[1.1] mb-12">
-              Visit our <br /><span className="italic font-light opacity-60">campus.</span>
+            <h2 className="text-4xl md:text-7xl leading-[1.1] mb-12">
+              Visit our <br /><span className="opacity-80">campus.</span>
             </h2>
             
             <div className="space-y-16">
@@ -61,7 +61,7 @@ export function Contact() {
             className="aspect-[4/5] img-reveal border-thin shadow-2xl"
           >
             <img 
-              src="/carmel_dept/Intensive-Care-Units-580x360.webp" 
+              src="/hero_slideshow/9ead531de00e67864a3153c298b4a2ebdbceef72-3840x2560.webp" 
               alt="Hospital Architecture"
               className="w-full h-full object-cover"
             />

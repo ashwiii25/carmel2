@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const DEPARTMENTS = [
   { id: "01", name: "Cardiology", focus: "Heart & Vascular Excellence", image: "/carmel_dept/Cardiology-580x360.webp" },
@@ -25,8 +26,8 @@ export function Departments() {
             className="max-w-2xl"
           >
             <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Clinical Excellence</h3>
-            <h2 className="text-5xl md:text-7xl leading-[0.95]">
-              Centers of <span className="italic font-light text-white/60">Expertise.</span>
+            <h2 className="text-4xl md:text-7xl leading-[1.1]">
+              Centers of <span className="text-white/80">Expertise.</span>
             </h2>
           </motion.div>
         </div>
@@ -55,6 +56,21 @@ export function Departments() {
             </motion.div>
           ))}
         </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-20 flex justify-center"
+        >
+          <Link 
+            href="/departments" 
+            className="group flex items-center gap-4 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] px-8 py-4 md:px-10 md:py-5 border border-white/20 hover:border-secondary transition-all duration-500 rounded-full"
+          >
+            <span>View All Departments</span>
+            <div className="w-8 h-px bg-white/20 group-hover:bg-secondary group-hover:w-12 transition-all duration-500" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

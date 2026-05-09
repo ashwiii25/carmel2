@@ -5,14 +5,15 @@ import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 
 const HERO_IMAGES = [
-  "/carmel_dept/Intensive-Care-Units-580x360.webp",
-  "/carmel_dept/General-Medicine-580x360.webp",
-  "/carmel_dept/Nursing-Department-580x360.webp",
-  "/carmel_dept/Radiology-580x360.webp",
-  "/carmel_dept/MICU-580x360.webp",
-  "/carmel_dept/Physiotherapy-580x360.webp",
-  "/carmel_dept/Dialysis-580x360.webp",
-  "/carmel_dept/Paediatrics-580x360.webp",
+  "/hero_slideshow/eb-website-image-hero-3840x2560.webp",
+  "/hero_slideshow/ey-doctors-in-discussion-in-hospital.webp",
+  "/hero_slideshow/pexels-cedric-fauntleroy-4270086.webp",
+  "/hero_slideshow/pexels-imadclicks-14558557.webp",
+  "/hero_slideshow/hospital_emergency_room_view003.webp",
+  "/hero_slideshow/unnamed-file-3840x2560.webp",
+  "/hero_slideshow/8c46e278d48667f791c5650e5e9548e128e758c2-3840x2560.webp",
+  "/hero_slideshow/9ead531de00e67864a3153c298b4a2ebdbceef72-3840x2560.webp",
+  "/hero_slideshow/ed8f1c912abec340f3e692008c2999b1e5bfee2e-3840x2560.webp",
 ];
 
 export function Hero() {
@@ -74,9 +75,9 @@ export function Hero() {
       {/* Content Container */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
         <div className="container-custom">
-          <h1 ref={titleRef} className="text-6xl md:text-8xl lg:text-[10rem] mb-12 leading-[0.85] tracking-tighter drop-shadow-2xl">
-            <span className="block italic font-light opacity-90">Refining</span>
-            <span className="block font-bold">Healthcare.</span>
+          <h1 ref={titleRef} className="text-5xl md:text-8xl lg:text-9xl mb-12 leading-[1.1] tracking-tight drop-shadow-2xl">
+            <span className="block opacity-90">Healing with</span>
+            <span className="block font-bold">Heart.</span>
           </h1>
           
           <motion.div

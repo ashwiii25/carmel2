@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0A192F; /* Deep Navy */
+  --color-primary: #3065B5; /* Hospital Blue */
   --color-secondary: #C5A059; /* Muted Gold */
   --color-accent: #78909C; /* Sage/Slate */
   --color-background: #FDFBF7; /* Alabaster */
   --color-foreground: #1A1A1A; /* Near Black */
   --color-muted: #E5E7EB;
-  --color-border: rgba(15, 25, 47, 0.1);
+  --color-border: rgba(48, 101, 181, 0.1);
 
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
-  --font-serif: var(--font-outfit);
+  --font-heading: var(--font-lato);
+  --font-serif: var(--font-lato);
 }
 
 @layer base {
@@ -24,9 +24,13 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 800; /* Professional Bold */
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    font-weight: 700; /* Standard Professional Bold */
+    letter-spacing: -0.01em; /* Neutral tracking for clarity */
+    line-height: 1.2;
+  }
+
+  a, button, input, textarea {
+    @apply transition-all duration-300 ease-in-out;
   }
 }
 

@@ -21,20 +21,21 @@ export function Footer() {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-8">Navigation</h4>
             <ul className="space-y-4 text-sm font-light text-white/60">
-              <li><Link href="#about" className="hover:text-white transition-colors">Legacy</Link></li>
-              <li><Link href="#departments" className="hover:text-white transition-colors">Expertise</Link></li>
-              <li><Link href="#doctors" className="hover:text-white transition-colors">Specialists</Link></li>
-              <li><Link href="#services" className="hover:text-white transition-colors">Infrastructure</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">Legacy</Link></li>
+              <li><Link href="/departments" className="hover:text-white transition-colors">Expertise</Link></li>
+              <li><Link href="/doctors" className="hover:text-white transition-colors">Specialists</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Infrastructure</Link></li>
+              <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-8">Specialities</h4>
             <ul className="space-y-4 text-sm font-light text-white/60">
-              <li><Link href="#" className="hover:text-white transition-colors">Cardiology</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Neurology</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Orthopedics</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Oncology</Link></li>
+              <li><Link href="/departments/cardiology" className="hover:text-white transition-colors">Cardiology</Link></li>
+              <li><Link href="/departments/nephrology" className="hover:text-white transition-colors">Nephrology</Link></li>
+              <li><Link href="/departments/orthopaedics" className="hover:text-white transition-colors">Orthopaedics</Link></li>
+              <li><Link href="/departments/general-surgery" className="hover:text-white transition-colors">General Surgery</Link></li>
             </ul>
           </div>
 

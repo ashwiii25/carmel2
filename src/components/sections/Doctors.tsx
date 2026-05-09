@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const DOCTORS = [
   {
@@ -37,8 +38,8 @@ export function Doctors() {
             className="max-w-2xl"
           >
             <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Medical Team</h3>
-            <h2 className="text-5xl md:text-7xl leading-[0.95]">
-              World-Class <span className="italic font-light opacity-60">Specialists.</span>
+            <h2 className="text-4xl md:text-7xl leading-[1.1]">
+              World-Class <span className="opacity-80">Specialists.</span>
             </h2>
           </motion.div>
         </div>
@@ -67,6 +68,21 @@ export function Doctors() {
             </motion.div>
           ))}
         </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-20 flex justify-center"
+        >
+          <Link 
+            href="/doctors" 
+            className="group flex items-center gap-4 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] px-8 py-4 md:px-10 md:py-5 border border-primary/20 text-primary hover:border-primary transition-all duration-500 rounded-full"
+          >
+            <span>Meet Our Specialists</span>
+            <div className="w-8 h-px bg-primary/20 group-hover:bg-primary group-hover:w-12 transition-all duration-500" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
