@@ -27,7 +27,7 @@ export default async function DepartmentDetailPage({ params }: Props) {
   const doctorsInDept = getDoctorsByDepartment(dept.slug);
 
   return (
-    <main className="bg-background pt-32">
+    <main className="bg-background">
       <CinematicHero 
         title={dept.name}
         subtitle={dept.desc}
@@ -41,7 +41,7 @@ export default async function DepartmentDetailPage({ params }: Props) {
       {/* Overview Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-[1fr_400px] gap-24">
+          <div className="grid lg:grid-cols-[1fr_360px] gap-12 lg:gap-24">
             <div>
               <SectionHeader 
                 kicker="Overview"
@@ -76,7 +76,7 @@ export default async function DepartmentDetailPage({ params }: Props) {
             </div>
 
             <aside className="space-y-12">
-              <div className="bg-primary p-12 rounded-2xl text-white">
+              <div className="bg-primary p-8 md:p-12 rounded-2xl text-white">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary mb-6">Inquiry</h4>
                 <h3 className="text-2xl font-bold mb-8">Need more information?</h3>
                 <p className="text-white/60 font-light mb-12 leading-relaxed">
@@ -113,14 +113,14 @@ export default async function DepartmentDetailPage({ params }: Props) {
               description={`Our ${dept.name} team consists of board-certified clinicians with decades of collective experience.`}
             />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {doctorsInDept.map((doc) => (
                 <Link 
                   key={doc.id}
                   href={`/doctors/${doc.slug}`}
                   className="group block bg-white rounded-2xl overflow-hidden border border-primary/5 hover:border-secondary/20 transition-all duration-500"
                 >
-                  <div className="aspect-square overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <div className="aspect-square overflow-hidden transition-all duration-700">
                     <img 
                       src={doc.image} 
                       alt={doc.name} 

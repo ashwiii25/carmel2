@@ -1,0 +1,13 @@
+Dr. Sam Koruth
+
+
+
+Edit here to add Doctor’s detailed bio
+
+		Doctor\'s details
+Speciality
+	General Surgery
+Degree
+	MBBS MS
+Categories:
+	Surgeon

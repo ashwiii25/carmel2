@@ -38,13 +38,13 @@ export function Doctors() {
             className="max-w-2xl"
           >
             <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Medical Team</h3>
-            <h2 className="text-4xl md:text-7xl leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.1]">
               World-Class <span className="opacity-80">Specialists.</span>
             </h2>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-16">
           {DOCTORS.map((doc, index) => (
             <motion.div
               key={doc.name}

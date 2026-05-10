@@ -26,7 +26,7 @@ export function Departments() {
             className="max-w-2xl"
           >
             <h3 className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-8">Clinical Excellence</h3>
-            <h2 className="text-4xl md:text-7xl leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.1]">
               Centers of <span className="text-white/80">Expertise.</span>
             </h2>
           </motion.div>
@@ -40,7 +40,7 @@ export function Departments() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
-              className="group p-10 md:p-12 border-b border-white/10 md:border-r border-white/10 last:border-r-0 transition-colors duration-500 hover:bg-white/5 cursor-pointer relative overflow-hidden"
+              className="group p-6 sm:p-8 md:p-10 lg:p-12 border-b border-white/10 md:border-r border-white/10 last:border-r-0 transition-colors duration-500 hover:bg-white/5 cursor-pointer relative overflow-hidden"
             >
               <div className="relative z-10">
                 <span className="block text-[10px] font-bold text-secondary mb-12 tracking-[0.2em]">{dept.id}</span>

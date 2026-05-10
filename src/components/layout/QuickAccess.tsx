@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils";
 
 const QUICK_ACTIONS = [
   { icon: Ambulance, label: "Emergency", href: "tel:+914842901000", primary: true },
-  { icon: Search, label: "Find Doctor", href: "#doctors" },
-  { icon: PhoneCall, label: "Contact", href: "#contact" },
+  { icon: Search, label: "Find Doctor", href: "/doctors" },
+  { icon: PhoneCall, label: "Contact", href: "/contact" },
 ];
 
 export function QuickAccess() {

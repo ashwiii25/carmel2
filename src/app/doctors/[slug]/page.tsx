@@ -4,6 +4,7 @@ import { CinematicHero } from "@/components/shared/CinematicHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, Globe, GraduationCap, Award, ArrowRight } from "lucide-react";
 
 interface Props {
@@ -27,11 +28,11 @@ export default async function DoctorProfilePage({ params }: Props) {
   const dept = getDepartmentBySlug(doc.departmentSlug);
 
   return (
-    <main className="bg-background pt-32">
+    <main className="bg-background">
       <CinematicHero 
         title={doc.name}
         subtitle={`${doc.speciality} · ${doc.experience} Experience`}
-        image={doc.image}
+        image={dept?.image || "/carmel_bg.jpg"}
         breadcrumbs={[
           { label: "Specialists", href: "/doctors" },
           { label: doc.name }
@@ -40,10 +41,20 @@ export default async function DoctorProfilePage({ params }: Props) {
 
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-[450px_1fr] gap-24 items-start">
-            {/* Sidebar / Info Card */}
-            <aside className="sticky top-32">
-              <div className="bg-primary/5 p-12 rounded-2xl border border-primary/5">
+          <div className="grid lg:grid-cols-[380px_1fr] xl:grid-cols-[420px_1fr] gap-12 lg:gap-16 xl:gap-24 items-start">
+            {/* Sidebar / Info Card - appears below main content on mobile */}
+            <aside className="order-2 lg:order-1 lg:sticky lg:top-32">
+              <div className="bg-primary/5 p-8 md:p-12 rounded-2xl border border-primary/5">
+                <div className="mb-10 relative w-full aspect-square md:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+                  <Image 
+                    src={doc.image} 
+                    alt={doc.name} 
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 420px"
+                    priority
+                  />
+                </div>
                 <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary mb-12">Consultation</h4>
                 
                 <div className="space-y-12">
@@ -91,12 +102,19 @@ export default async function DoctorProfilePage({ params }: Props) {
             </aside>
 
             {/* Main Content */}
-            <div className="max-w-3xl">
+            <div className="order-1 lg:order-2 max-w-3xl w-full">
               <SectionHeader 
                 kicker="About the Specialist"
                 title={`Expertise rooted in ${doc.speciality}.`}
-                description={doc.bio}
+                description={doc.bio.split('\n\n')[0]}
               />
+              {doc.bio.split('\n\n').length > 1 && (
+                <div className="mt-6 space-y-4">
+                  {doc.bio.split('\n\n').slice(1).map((para, i) => (
+                    <p key={i} className="text-base font-light text-foreground/60 leading-relaxed">{para}</p>
+                  ))}
+                </div>
+              )}
 
               <div className="grid sm:grid-cols-2 gap-16 mt-24">
                 <div>
@@ -142,7 +160,7 @@ export default async function DoctorProfilePage({ params }: Props) {
 
       {/* Footer CTA */}
       <section className="section-padding bg-primary text-white overflow-hidden relative">
-        <div className="container-custom relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="container-custom relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-center md:text-left">
           <div className="max-w-2xl text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Looking for a different specialist?</h2>
             <p className="text-lg font-light text-white/60">Our team includes over 50 board-certified clinicians across various specialities.</p>

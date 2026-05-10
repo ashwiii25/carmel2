@@ -14,291 +14,503 @@ export interface Doctor {
 
 export const doctors: Doctor[] = [
   {
-    id: "vinod-thomas",
-    slug: "dr-vinod-thomas",
-    name: "Dr. Vinod Thomas",
-    speciality: "Cardiology",
-    departmentSlug: "cardiology",
-    experience: "20+ Years",
-    image: "/carmel_doc/Dr.Vinod-Thomas-500x500.webp",
-    qualifications: ["MD (General Medicine)", "DM (Cardiology)"],
-    bio: "Dr. Vinod Thomas is a seasoned cardiologist with over two decades of experience in interventional and non-invasive cardiology. He has performed thousands of cardiac procedures and is known for his patient-centric approach to cardiac care.",
-    consultationHours: "Mon - Sat: 9:00 AM - 1:00 PM",
-    languages: ["English", "Malayalam", "Hindi"],
+    "id": "dr-nithya-nathan",
+    "slug": "dr-nithya-nathan",
+    "name": "Dr Nithya Nathan",
+    "speciality": "Dermatology",
+    "departmentSlug": "dermatology",
+    "experience": "16+ Years",
+    "image": "/carmel_doc/Dr.Nithya-Nathan.webp",
+    "qualifications": [
+      "MBBS",
+      "MD DVL"
+    ],
+    "bio": "She has undergone specialized training to diagnose and treat diseases of the skin, hair, nails, sexually transmitted infections (STIs), and leprosy.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "litty-maria",
-    slug: "dr-sr-litty-maria",
-    name: "Dr. Sr. Litty Maria",
-    speciality: "General Surgery",
-    departmentSlug: "general-surgery",
-    experience: "15+ Years",
-    image: "/carmel_doc/Dr.Sr_.Litty-Maria-500x500.webp",
-    qualifications: ["MS (General Surgery)"],
-    bio: "Dr. Sr. Litty Maria is a skilled general surgeon with expertise in both open and minimally invasive surgical procedures. Her compassionate approach and surgical precision have made her a trusted name in the community.",
-    consultationHours: "Mon - Sat: 10:00 AM - 2:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-yashna-v",
+    "slug": "dr-yashna-v",
+    "name": "Dr Yashna V",
+    "speciality": "Dermatology",
+    "departmentSlug": "dermatology",
+    "experience": "7+ Years",
+    "image": "/carmel_doc/Dr.Yashna-V.webp",
+    "qualifications": [
+      "MBBS",
+      "MD (Dermatology)"
+    ],
+    "bio": "Dr. Yashna V. is a young and dynamic dermatologist with a focus on clinical and aesthetic dermatology. She brings fresh perspectives and the latest treatment approaches to skin, hair, and nail care.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "jimmy-jose",
-    slug: "dr-jimmy-jose",
-    name: "Dr. Jimmy Jose",
-    speciality: "Neurology",
-    departmentSlug: "psychiatry",
-    experience: "18+ Years",
-    image: "/carmel_doc/Dr.Jimmy-Jose-500x500.webp",
-    qualifications: ["MD (Medicine)", "DM (Neurology)"],
-    bio: "Dr. Jimmy Jose brings 18 years of expertise in diagnosing and treating neurological disorders. He specializes in stroke management, epilepsy, and neuromuscular diseases, offering both diagnostic evaluations and ongoing management plans.",
-    consultationHours: "Mon - Fri: 9:30 AM - 1:30 PM",
-    languages: ["English", "Malayalam", "Hindi"],
+    "id": "dr-anagha",
+    "slug": "dr-anagha",
+    "name": "Dr. Anagha",
+    "speciality": "Dermatology",
+    "departmentSlug": "dermatology",
+    "experience": "10+ Years",
+    "image": "/carmel_doc/anagha.webp",
+    "qualifications": [
+      "MBBS",
+      "MD DVL"
+    ],
+    "bio": "She has undergone specialized training to diagnose and treat diseases of the skin, hair, nails, sexually transmitted infections (STIs), and leprosy.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "mathew-issac",
-    slug: "dr-mathew-issac",
-    name: "Dr. Mathew Issac",
-    speciality: "Orthopedics",
-    departmentSlug: "orthopaedics",
-    experience: "22+ Years",
-    image: "/carmel_doc/Dr.Mathew-Issac-500x500.webp",
-    qualifications: ["MS (Orthopaedics)", "Fellowship in Joint Replacement"],
-    bio: "Dr. Mathew Issac is a veteran orthopaedic surgeon with over 22 years of experience in joint replacement, trauma care, and sports medicine. He has successfully performed thousands of joint replacement surgeries.",
-    consultationHours: "Mon - Sat: 9:00 AM - 12:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-aswathy-anand",
+    "slug": "dr-aswathy-anand",
+    "name": "Dr. Aswathy Anand",
+    "speciality": "Clinical Psychology",
+    "departmentSlug": "clinical-psychology",
+    "experience": "10+ Years",
+    "image": "/carmel_doc/Dr.Aswathy-Anand-500x500.webp",
+    "qualifications": [
+      "M.Phil PHD",
+      "PGCFM"
+    ],
+    "bio": "Dr. Aswathy Anand is a highly qualified and experienced clinical psychologist with an M.Phil and PhD in the field of psychology, as well as a PGCFM qualification. With over a decade of experience in the field of psychological assessment, adolescent health and wellness, family counselling, and learning assessment and remediation, Dr. Anand is a leading expert in her field.\n\nShe began her career at Alphavista Health Care in Kakkanad, where she gained valuable experience working with patients and developing her skills as a clinician. Later, Later she joined at life skill counseling centre kollam, currently she is providing her service to Najath hospital , Aluva and sound waves clinic , Aluva. where she continued to provide compassionate and effective care to patients in need.\n\nThroughout her career, Dr. Anand has developed a reputation for her expertise in adolescent health and wellness, family counselling, and learning assessment and remediation. She is committed to helping her patients achieve optimal mental health and wellbeing, and she works closely with them to develop personalized treatment plans that address their unique needs and challenges.\n\nWith her extensive experience and advanced qualifications, Dr. Aswathy Anand is a respected leader in the field of clinical psychology. She continues to pursue ongoing professional development opportunities to ensure that she remains at the forefront of her field and provides her patients with the best possible care.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "nithya-nathan",
-    slug: "dr-nithya-nathan",
-    name: "Dr. Nithya Nathan",
-    speciality: "Dermatology",
-    departmentSlug: "dermatology",
-    experience: "16+ Years",
-    image: "/carmel_doc/Dr.Nithya-Nathan.webp",
-    qualifications: ["MD (Dermatology, Venereology & Leprosy)"],
-    bio: "Dr. Nithya Nathan is a highly experienced dermatologist specializing in clinical and cosmetic dermatology. With 16 years of experience, she provides expert care for all skin conditions using the latest treatment modalities.",
-    consultationHours: "Mon - Sat: 10:00 AM - 3:00 PM",
-    languages: ["English", "Malayalam", "Tamil"],
+    "id": "dr-cijoy-joseph",
+    "slug": "dr-cijoy-joseph",
+    "name": "Dr. Cijoy Joseph",
+    "speciality": "ENT",
+    "departmentSlug": "ent",
+    "experience": "14+ Years",
+    "image": "/carmel_doc/Dr.Cijoy-Joseph-1.webp",
+    "qualifications": [
+      "MBBS"
+    ],
+    "bio": "Dr. Cijoy Joseph is a medical professional with an MBBS degree. He is currently working as a Resident Medical Officer (RMO) in a hospital.\n\nAs an RMO, Dr. Joseph is responsible for providing medical care to patients attending casualty and inpatients, assisting senior physicians and specialists, and overseeing the care and treatment of patients. He is skilled in diagnosing and treating a wide range of medical conditions and is committed to providing the highest standard of care to his patients.\n\nDr. Cijoy was previously working at Amala Medical College, and his training and experience have equipped him with the knowledge and skills necessary to work effectively in a hospital setting. He also represented, medical team in National Games in 2015 and medical teams of many other, state and district level sports competitions. He has a strong understanding of medical ethics and patient care, and he is dedicated to ensuring that his patients receive the best possible care.\n\nIn addition to his work as an RMO, Dr. Cijoy is also committed to ongoing professional development. He regularly attends medical conferences and seminars to stay up-to-date with the latest advancements in his field.\n\nOverall, Dr. Cijoy Joseph is a compassionate and skilled medical professional who is committed to providing the best possible care to his patients. His dedication to his patients and his profession has earned him the respect and admiration of his colleagues and patients alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "prema-george",
-    slug: "dr-prema-george",
-    name: "Dr. Prema George",
-    speciality: "Pediatrics",
-    departmentSlug: "paediatrics",
-    experience: "19+ Years",
-    image: "/carmel_doc/Dr.Prema-George-500x500.webp",
-    qualifications: ["MD (Paediatrics)"],
-    bio: "Dr. Prema George is a compassionate paediatrician dedicated to the health and well-being of children. With 19 years of experience, she provides comprehensive care from newborn screenings to adolescent health management.",
-    consultationHours: "Mon - Sat: 9:00 AM - 1:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-delcine-maria-jose",
+    "slug": "dr-delcine-maria-jose",
+    "name": "Dr. Delcine Maria Jose",
+    "speciality": "Psychiatry",
+    "departmentSlug": "psychiatry",
+    "experience": "10+ Years",
+    "image": "/carmel_doc/delcine.webp",
+    "qualifications": [
+      "MBBS MD"
+    ],
+    "bio": "Psychiatrist with 2+ years of experience providing compassionate mental health care to patients committed to improving patients’ mental well being and quality of life with proficiency in utilizing evidence based therapeutic techniques and psychopharmacological interventions.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "denny",
-    slug: "dr-denny",
-    name: "Dr. Denny",
-    speciality: "General Medicine",
-    departmentSlug: "general-medicine",
-    experience: "12+ Years",
-    image: "/carmel_doc/DR.DENNY_-500x500.webp",
-    qualifications: ["MD (General Medicine)"],
-    bio: "Dr. Denny is an experienced internal medicine specialist focused on comprehensive health management and chronic disease care. He believes in a holistic approach to treatment, emphasizing preventive health and patient education.",
-    consultationHours: "Mon - Sat: 9:00 AM - 4:00 PM",
-    languages: ["English", "Malayalam", "Hindi"],
+    "id": "dr-denny-p-kuttikkatu",
+    "slug": "dr-denny-p-kuttikkatu",
+    "name": "Dr. Denny P Kuttikkatu",
+    "speciality": "General Surgery",
+    "departmentSlug": "general-surgery",
+    "experience": "12+ Years",
+    "image": "/carmel_doc/DR.DENNY_-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MS",
+      "FRCS"
+    ],
+    "bio": "Dr. Denny P Kuttikkatu is a skilled laparoscopic surgeon with years of experience in the field of surgery. His impressive educational background includes an MBBS, an MS in General Surgery, and a Fellowship from the Royal College of Surgeons. Dr. Kuttikkatu’s expertise lies in laparoscopic surgery, where he has performed numerous procedures, including appendectomies, hernia repairs, gastric bypass surgeries, and cholecystectomies.\n\nDr. Kuttikkatu’s extensive training and experience in laparoscopic surgery have made him an expert in the field. He is dedicated to utilizing the latest surgical technology and techniques to provide his patients with the best possible outcomes. In addition to laparoscopic surgery, Dr. Kuttikkatu has undergone additional training in advanced laparoscopic techniques, including single-incision laparoscopic surgery, robotic surgery, and NOTES. His knowledge and expertise in these advanced techniques have made him a sought-after surgeon for patients seeking less invasive surgical options.\n\nDr. Kuttikkatu is known for his compassionate approach to patient care. He understands that undergoing surgery can be a stressful and emotional experience, and he takes the time to listen to his patients’ concerns and fears. He explains the surgical process in detail and ensures that his patients are fully informed before any procedure.\n\nDr. Kuttikkatu is also passionate about teaching and mentoring other surgeons. He is a frequent speaker at national and international conferences and workshops, where he shares his experience in laparoscopic surgery with other medical professionals. Dr. Kuttikkatu also trains surgical residents in his hospital and is known for his supportive and encouraging teaching style.\n\nDr. Kuttikkatu’s dedication to his profession has earned him numerous awards and accolades. He has been recognized for his surgical skills, research, and teaching, and has received numerous awards and honors throughout his career. He is a member of many prestigious medical societies, including the Society of American Gastrointestinal and Endoscopic Surgeons, the Society of Laparoscopic Surgeons of India, and the Association of Surgeons of India.\n\nIn his personal life, Dr. Kuttikkatu is an avid traveler and enjoys exploring new cultures and cuisines. He is also a dedicated family man and enjoys spending time with his wife and children.\n\nIn conclusion, Dr. Denny P Kuttikkatu is a highly skilled and compassionate laparoscopic surgeon with years of experience in the field. His dedication to utilizing the latest surgical technology and techniques, combined with his commitment to patient care, has earned him the respect and admiration of his patients and colleagues. Dr. Kuttikkatu’s passion for teaching and mentoring other surgeons ensures that his expertise in laparoscopic surgery will continue to benefit the medical community for years to come.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "aswathy-anand",
-    slug: "dr-aswathy-anand",
-    name: "Dr. Aswathy Anand",
-    speciality: "Gynaecology",
-    departmentSlug: "gynaecology",
-    experience: "10+ Years",
-    image: "/carmel_doc/Dr.Aswathy-Anand-500x500.webp",
-    qualifications: ["MS (OBG)", "Fellowship in Laparoscopic Surgery"],
-    bio: "Dr. Aswathy Anand is a dedicated gynaecologist and obstetrician with expertise in high-risk pregnancies and laparoscopic gynaecological surgeries. She provides compassionate care tailored to every woman's unique needs.",
-    consultationHours: "Mon - Sat: 10:00 AM - 2:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-jimmy-jose",
+    "slug": "dr-jimmy-jose",
+    "name": "Dr. Jimmy Jose",
+    "speciality": "General Medicine",
+    "departmentSlug": "general-medicine",
+    "experience": "18+ Years",
+    "image": "/carmel_doc/Dr.Jimmy-Jose-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MD"
+    ],
+    "bio": "Dr. Jimmy Jose is a highly qualified medical professional with an MBBS degree and a postgraduate degree in MD. He has several years of experience working in the medical field and is currently serving as the Chief Physician in a hospital or healthcare organization.\n\nAs a Chief Physician, Dr. Jimmy is responsible for overseeing the medical care provided to patients in the hospital. He works closely with other medical professionals to develop treatment plans and ensure that patients receive the highest standard of care possible. Dr. Jose is also responsible for managing the medical staff and ensuring that they are providing care in accordance with best practices and standards.\n\nDr. Jimmy’s extensive training and experience have equipped him with the knowledge and skills necessary to diagnose and treat a wide range of medical conditions. He is well-versed in the latest advancements in his field and is committed to ongoing professional development.\n\nIn addition to his work as a Chief Physician, Dr. Jimmy is also dedicated to medical research and education. He has published several papers in medical journals and regularly participates in medical conferences and seminars.\n\nOverall, Dr. Jimmy Jose is a highly respected and skilled medical professional who is dedicated to providing the best possible care to his patients. His commitment to his profession and his patients has earned him the admiration and respect of his colleagues and patients alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "cijoy-joseph",
-    slug: "dr-cijoy-joseph",
-    name: "Dr. Cijoy Joseph",
-    speciality: "ENT",
-    departmentSlug: "ent",
-    experience: "14+ Years",
-    image: "/carmel_doc/Dr.Cijoy-Joseph-1.webp",
-    qualifications: ["MS (ENT)"],
-    bio: "Dr. Cijoy Joseph is an ENT specialist with extensive experience in managing ear, nose, and throat conditions. He is proficient in endoscopic sinus surgeries and advanced microsurgical procedures.",
-    consultationHours: "Mon - Fri: 9:30 AM - 1:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-jose-jimmy",
+    "slug": "dr-jose-jimmy",
+    "name": "Dr. Jose Jimmy",
+    "speciality": "Dental",
+    "departmentSlug": "dental",
+    "experience": "13+ Years",
+    "image": "/carmel_doc/Dr.Jose-Jimmy-500x500.webp",
+    "qualifications": [
+      "BDS",
+      "MPH (AUSTRALIA)"
+    ],
+    "bio": "Dr. Jose Jimmy is a highly skilled dental surgeon with over 10 years of experience in the field. He has a BDS degree and a Master of Public Health (MPH) degree from Australia. Dr. Jimmy’s area of expertise includes implant dentistry, endodontic procedures, disimpaction of wisdom teeth, and TMJ disorders.\n\nDr. Jose has received training in performing procedures under magnification, which enhances the precision and accuracy of the treatment outcomes. He is committed to providing his patients with the highest level of care possible, and his patients appreciate his compassionate and patient-centered approach to dentistry.\n\nThroughout his career, Dr. Jose has remained dedicated to ongoing professional development. He regularly attends dental conferences and seminars to stay up-to-date with the latest advancements in his field. He is also a member of several professional organizations, which allows him to collaborate with other dental professionals and share his knowledge and expertise.\n\nOverall, Dr. Jose Jimmy is a highly skilled and compassionate dental surgeon who is dedicated to providing his patients with the best possible care. His commitment to ongoing professional development and his expertise in the field have earned him the admiration and respect of his patients and colleagues alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "joseph-george",
-    slug: "dr-joseph-george",
-    name: "Dr. Joseph George",
-    speciality: "Nephrology",
-    departmentSlug: "nephrology",
-    experience: "20+ Years",
-    image: "/carmel_doc/Dr.Joseph-George.webp",
-    qualifications: ["MD (Medicine)", "DM (Nephrology)"],
-    bio: "Dr. Joseph George is a leading nephrologist with two decades of experience in kidney disease management and dialysis. He is a trusted expert in renal care, providing comprehensive treatment from early-stage kidney disease to transplant evaluation.",
-    consultationHours: "Mon - Sat: 9:00 AM - 12:30 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-joseph-george",
+    "slug": "dr-joseph-george",
+    "name": "Dr. Joseph George",
+    "speciality": "Orthopaedics",
+    "departmentSlug": "orthopaedics",
+    "experience": "20+ Years",
+    "image": "/carmel_doc/Dr.Joseph-George.webp",
+    "qualifications": [
+      "MBBS",
+      "MS(Ortho)",
+      "Arthroplasty Fellowship"
+    ],
+    "bio": "Primary joint replacement and revision joint replacement. ACL, PCL, Multigamenteuos injury. Meniscal Repair. Cartilage Repair. Deformity Correction. Joint preservation Surgeries.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "k-ajit",
-    slug: "dr-k-ajit",
-    name: "Dr. K. Ajit",
-    speciality: "Ophthalmology",
-    departmentSlug: "ophthalmology",
-    experience: "17+ Years",
-    image: "/carmel_doc/Dr.K-Ajit-500x500.webp",
-    qualifications: ["MS (Ophthalmology)"],
-    bio: "Dr. K. Ajit is an experienced ophthalmologist specializing in cataract surgery, glaucoma management, and retinal care. He uses the latest diagnostic and surgical techniques to deliver excellent visual outcomes.",
-    consultationHours: "Mon - Sat: 10:00 AM - 1:00 PM",
-    languages: ["English", "Malayalam", "Hindi"],
+    "id": "dr-k-ajit",
+    "slug": "dr-k-ajit",
+    "name": "Dr. K. Ajit",
+    "speciality": "General Medicine",
+    "departmentSlug": "general-medicine",
+    "experience": "17+ Years",
+    "image": "/carmel_doc/Dr.K-Ajit-500x500.webp",
+    "qualifications": [
+      "MBBS"
+    ],
+    "bio": "Dr. K. Ajit is a medical professional with an MBBS degree and is currently working as a CMO in a hospital. As a CMO, Dr. Ajit is responsible for providing medical care to patients, assisting senior physicians and specialists, and overseeing the care and treatment of patients.\n\nDr. Ajit has a strong understanding of medical ethics and patient care, and he is committed to ensuring that his patients receive the best possible care. He is skilled in diagnosing and treating a wide range of medical conditions and has experience working in various specialties.\n\nIn addition to his work as an CMO, Dr. Ajit is also committed to ongoing professional development. He regularly attends medical conferences and seminars to stay up-to-date with the latest advancements in his field.\n\nOverall, Dr. K. Ajit is a skilled medical professional who is dedicated to providing the best possible care to his patients. His commitment to his patients and his profession has earned him the respect and admiration of his colleagues and patients alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "merin-cherian",
-    slug: "dr-merin-cherian",
-    name: "Dr. Merin Cherian",
-    speciality: "Dental",
-    departmentSlug: "dental",
-    experience: "8+ Years",
-    image: "/carmel_doc/Dr.Merin-Cherian-500x500.webp",
-    qualifications: ["BDS", "MDS (Oral & Maxillofacial Surgery)"],
-    bio: "Dr. Merin Cherian is a dental surgeon specializing in oral and maxillofacial surgery. She provides comprehensive dental care from routine check-ups to complex surgical procedures with a gentle and reassuring approach.",
-    consultationHours: "Mon - Sat: 9:00 AM - 5:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-mathew-issac",
+    "slug": "dr-mathew-issac",
+    "name": "Dr. Mathew Issac",
+    "speciality": "Orthopaedics",
+    "departmentSlug": "orthopaedics",
+    "experience": "22+ Years",
+    "image": "/carmel_doc/Dr.Mathew-Issac-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "D.ORTHO",
+      "MS ORTHO"
+    ],
+    "bio": "Dr. Mathew Issac is Consultant Orthopaedic Surgeon with an MBBS degree, and postgraduate degree in D.Ortho, and a Masters degree in Orthopedics (MS Ortho). He worked in the Kerala Govt.Medical Education Department for a period from May 1979 to September 1997.\n\nAs an orthopedic surgeon, Dr. Issac is responsible for diagnosing and treating a wide range of musculoskeletal conditions, such as fractures, dislocations, and joint injuries and joint  replacement. He has a strong understanding of the anatomy and physiology of the musculoskeletal system and is skilled in using a variety of diagnostic tools and surgical techniques to treat his patients.\n\nDr. Issac is dedicated to ensuring that his patients receive the best possible care and is committed to ongoing professional development. He regularly attends medical conferences and seminars to stay up-to-date with the latest advancements in his field.\n\nIn addition to his work as an orthopedic surgeon, Dr. Issac is also involved in medical research and education. He has published several papers in medical journals and is actively involved in teaching and training medical students and residents.\n\nOverall, Dr. Mathew Issac is a highly respected and skilled medical professional who is dedicated to providing the best possible care to his patients. His expertise in orthopedic surgery, commitment to ongoing professional development, and dedication to medical education and research have earned him the admiration and respect of his colleagues and patients alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "muneer",
-    slug: "dr-muneer",
-    name: "Dr. Muneer",
-    speciality: "Emergency Medicine",
-    departmentSlug: "emergency-medicine",
-    experience: "15+ Years",
-    image: "/carmel_doc/Dr.Muneer.webp",
-    qualifications: ["MD (Emergency Medicine)"],
-    bio: "Dr. Muneer is a skilled emergency medicine specialist who leads the round-the-clock emergency team at Carmel Hospital. With extensive experience in trauma care and acute resuscitation, he ensures rapid, life-saving interventions.",
-    consultationHours: "24/7 Emergency Duty",
-    languages: ["English", "Malayalam", "Hindi", "Arabic"],
+    "id": "dr-merin-cherian",
+    "slug": "dr-merin-cherian",
+    "name": "Dr. Merin Cherian",
+    "speciality": "Dental",
+    "departmentSlug": "dental",
+    "experience": "8+ Years",
+    "image": "/carmel_doc/Dr.Merin-Cherian-500x500.webp",
+    "qualifications": [
+      "BDS",
+      "MDS"
+    ],
+    "bio": "Dr. Merin Cherian is a highly skilled medical professional with a Bachelor of Dental Surgery (BDS) degree and a postgraduate degree in Orthodontics (MDS). She is an expert in the field of orthodontics and is currently working as an orthodontist with over 12 years of experience.\n\nAs an orthodontist, Dr. Cherian specializes in diagnosing and treating misaligned teeth and jaws, and is skilled in using a variety of orthodontic techniques to correct these issues. Her expertise includes fixed orthodontic treatment, smile correction, dentofacial orthopedic treatment, and restoration treatments. She is also an expert in early intervention of myofacial disorders in children.\n\nDr. Cherian is dedicated to ensuring that her patients receive the best possible care and is committed to ongoing professional development. She regularly attends medical conferences and seminars to stay up-to-date with the latest advancements in her field.\n\nIn addition to her work as an orthodontist, Dr. Cherian is also involved in medical research and education. She has published several papers in medical journals and is actively involved in teaching and training dental students and residents.\n\nOverall, Dr. Merin Cherian is a highly respected and skilled medical professional who is dedicated to providing the best possible care to her patients. Her expertise in orthodontics, commitment to ongoing professional development, and dedication to medical education and research have earned her the admiration and respect of her colleagues and patients alike.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "rafeeq-ak",
-    slug: "dr-rafeeq-ak",
-    name: "Dr. Rafeeq A.K.",
-    speciality: "Anaesthesia",
-    departmentSlug: "anaesthesia",
-    experience: "18+ Years",
-    image: "/carmel_doc/Dr.Rafeeq-A-K-500x500.webp",
-    qualifications: ["MD (Anaesthesiology)"],
-    bio: "Dr. Rafeeq A.K. is a senior anaesthesiologist with extensive experience in providing safe anaesthesia for complex surgical procedures. He also specializes in pain management and critical care.",
-    consultationHours: "Mon - Sat: Pre-Anaesthetic Clinic",
-    languages: ["English", "Malayalam"],
+    "id": "dr-muneer-a-a",
+    "slug": "dr-muneer-a-a",
+    "name": "Dr. Muneer A.A.",
+    "speciality": "Emergency Medicine",
+    "departmentSlug": "emergency-medicine",
+    "experience": "15+ Years",
+    "image": "/carmel_doc/Dr.Muneer.webp",
+    "qualifications": [
+      "MBBS",
+      "DA"
+    ],
+    "bio": "Dr. Muneer A.A is a highly skilled and experienced Anesthesiologist with a passion for providing exceptional care to his patients. He holds an MBBS degree from Alappuzha Medical College- Kerala University and MD, DA from Kottayam Medical College- MG University.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "saji-subramanian",
-    slug: "dr-saji-subramanian",
-    name: "Dr. Saji Subramanian",
-    speciality: "Laparoscopic Surgery",
-    departmentSlug: "laparoscopic-surgery",
-    experience: "16+ Years",
-    image: "/carmel_doc/Dr.Saji-Subramanian-500x500.webp",
-    qualifications: ["MS (General Surgery)", "Fellowship in Laparoscopic Surgery"],
-    bio: "Dr. Saji Subramanian is a pioneer in minimally invasive surgery at Carmel Hospital. His expertise in laparoscopic techniques ensures patients benefit from smaller incisions, less pain, and faster recovery.",
-    consultationHours: "Mon - Sat: 9:00 AM - 1:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-prema-george",
+    "slug": "dr-prema-george",
+    "name": "Dr. Prema George",
+    "speciality": "Gynaecology",
+    "departmentSlug": "gynaecology",
+    "experience": "19+ Years",
+    "image": "/carmel_doc/Dr.Prema-George-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MD",
+      "DGO"
+    ],
+    "bio": "Dr. Prema George is a highly qualified and experienced gynecologist with a career spanning several decades. She holds an MBBS degree, an MD in Obstetrics and Gynecology from Medical College Trivandrum, and a DGO (Diploma in Obstetrics and Gynecology).\n\nDr. Prema is a dedicated and compassionate medical professional who has made significant contributions to the field of gynecology. Her expertise lies in the management of complex gynecological conditions, including infertility, menstrual disorders, and high-risk pregnancies. She is also skilled in performing minimally invasive gynecological surgeries and has helped numerous women regain their health and well-being.\n\nAs the Chief Gynecologist at a leading healthcare facility, Dr. Prema is responsible for managing the gynecological department and overseeing the treatment of patients. She has a strong reputation for providing personalized care and support to her patients, and her commitment to their well-being is evident in her approach to treatment.\n\nOverall, Dr. Prema George is a highly respected and accomplished gynecologist who has made significant contributions to the field of women’s health. Her dedication, compassion, and expertise have helped countless women lead healthy and fulfilling lives.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "santhakumari-k",
-    slug: "dr-santhakumari-k",
-    name: "Dr. Santhakumari K.",
-    speciality: "General Medicine",
-    departmentSlug: "general-medicine",
-    experience: "25+ Years",
-    image: "/carmel_doc/Dr.Santhakumari-K-500x500.webp",
-    qualifications: ["MD (General Medicine)"],
-    bio: "Dr. Santhakumari K. is one of the most experienced internal medicine specialists at Carmel Hospital. With a quarter century of clinical practice, she brings unparalleled expertise in managing complex medical conditions.",
-    consultationHours: "Mon - Sat: 8:30 AM - 12:30 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-rafeeq-a-k",
+    "slug": "dr-rafeeq-a-k",
+    "name": "Dr. Rafeeq A K",
+    "speciality": "Paediatrics",
+    "departmentSlug": "paediatrics",
+    "experience": "18+ Years",
+    "image": "/carmel_doc/Dr.Rafeeq-A-K-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MD"
+    ],
+    "bio": "Dr. Rafeeq A.K is a highly skilled and experienced pediatrician with a passion for providing exceptional care to his young patients. He holds an MBBS degree from Al Ameen Medical college, Bijapur.Karnatak University and an MD in Pediatrics from JJM Medical College, Davanagare , Karnataka.\n\nWith years of experience in the field, Dr. Rafeeq has treated a wide range of pediatric conditions and illnesses. He is well-versed in managing common childhood ailments like colds, coughs, and fever, as well as more complex conditions like asthma, allergies, and neurological disorders. Dr. Rafeeq also specializes in providing care to newborns and infants, including routine check-ups and vaccinations.\n\nAs a pediatrician, Dr. Rafeeq is committed to creating a comfortable and supportive environment for his young patients and their families. He understands the unique challenges of caring for children and takes a compassionate and patient-centered approach to treatment. He is skilled in communicating with children and parents in a way that is clear and understandable, and always takes the time to answer questions and address concerns.\n\nIn addition to his clinical work, Dr. Rafeeq is actively involved in medical research and education. He has published several research papers in prominent medical journals and has presented his work at national and international conferences. He is also dedicated to mentoring and training young doctors and is committed to advancing the field of pediatric medicine. He is a member of the Indian academy pediatric, Member of Indian Medical Association, Member of National Neonatal Forum, Member of IMA AMS, Member of IAP Adolescent Chapter. He was successfully completed pediatric advance life support (PALS) training programme, NALS : Successfully completed Neonatal Advance Life support (NALS) programme. He was the scientific committee chairman for National Allergy & Immunology Conference (2019), Kerala State Pediatric Dermatology Conference (2018), and Kerala State Pediatric Pulmonology Conference (2018).Paediatric Gastroenterology conference (2022). He Conducted workshop for doctors in paediatric Endocrinology, Paediatric Dermatology etc. He attended IAP Regional workshop in science of vaccinology and selected as a district resource person for the Vaccinology. Contributed few topics in “Manual of Neonatology”, which is written by Dr. M.L Kulkarni, Professor and Head of Department of Pediatrics. The book is published by Jayapee Brothers, New Delhi, a leading medical book publishers in India. He was the secretary and President of Indian Medical Association (IMA) and Indian Academy of Paediatrics (IAP) at district branch, Resource Person for Diagnostic Stewardship program 2024 by National IAP.\n\nOverall, Dr. Rafeeq A.K is a highly respected and trusted pediatrician with a passion for providing the highest quality care to his young patients. His expertise, compassion, and dedication to his patients and their families make him a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "sr-sheela-maria",
-    slug: "dr-sr-sheela-maria",
-    name: "Dr. Sr. Sheela Maria",
-    speciality: "Clinical Psychology",
-    departmentSlug: "clinical-psychology",
-    experience: "20+ Years",
-    image: "/carmel_doc/Dr.Sr_.Sheela-Maria-500x500.webp",
-    qualifications: ["MPhil (Clinical Psychology)"],
-    bio: "Dr. Sr. Sheela Maria is a senior clinical psychologist with two decades of experience in psychometric evaluation, counseling, and behavioral therapy. Her gentle, empathetic approach creates a safe space for patients seeking mental health support.",
-    consultationHours: "Mon - Fri: 9:00 AM - 3:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-saji-subramanian",
+    "slug": "dr-saji-subramanian",
+    "name": "Dr. Saji Subramanian",
+    "speciality": "Cardiology",
+    "departmentSlug": "cardiology",
+    "experience": "16+ Years",
+    "image": "/carmel_doc/Dr.Saji-Subramanian-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MD",
+      "DM"
+    ],
+    "bio": "Dr. Saji Subramanian is a highly skilled and experienced interventional cardiologist with a passion for providing exceptional care to his patients. He holds an MBBS degree, an MD in Internal Medicine, and a DM in Cardiology from prestigious institutions in India.\n\nWith years of experience in the field, Dr. Subramanian specializes in the management of complex cardiac conditions, including coronary artery disease, heart failure, and arrhythmias. He is an expert in performing minimally invasive cardiac procedures, such as angioplasty, stent placement, and cardiac catheterization, to diagnose and treat various heart conditions.\n\nAs a consultant interventional cardiologist, Dr. Subramanian is committed to providing personalized care to each of his patients. He takes the time to understand their medical history and individual needs, and works closely with them to develop a comprehensive treatment plan. He is known for his compassionate and patient-centered approach to care, and his ability to communicate complex medical information in a clear and understandable way.\n\nDr. Subramanian is actively involved in medical research and education, and has published several research papers in leading medical journals. He is also dedicated to mentoring and training young doctors in the field of cardiology, and is committed to advancing the field through his work.\n\nOverall, Dr. Saji Subramanian is a highly respected and trusted interventional cardiologist with a passion for providing the highest quality care to his patients. His expertise, compassion, and dedication to his patients and the field of cardiology make him a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "sr-soumya-thomas",
-    slug: "dr-sr-soumya-thomas",
-    name: "Dr. Sr. Soumya Thomas",
-    speciality: "Physiotherapy",
-    departmentSlug: "physiotherapy",
-    experience: "12+ Years",
-    image: "/carmel_doc/Dr.Sr_.Soumya-Thomas-500x500.webp",
-    qualifications: ["BPT", "MPT (Neuro Rehabilitation)"],
-    bio: "Dr. Sr. Soumya Thomas heads the Physiotherapy department with expertise in neurological rehabilitation, post-surgical recovery, and musculoskeletal therapy. Her structured rehabilitation programs help patients regain independence faster.",
-    consultationHours: "Mon - Sat: 8:00 AM - 4:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-sam-koruth",
+    "slug": "dr-sam-koruth",
+    "name": "Dr. Sam Koruth",
+    "speciality": "General Surgery",
+    "departmentSlug": "general-surgery",
+    "experience": "10+ Years",
+    "image": "/carmel_doc/sam.webp",
+    "qualifications": [
+      "MBBS MS"
+    ],
+    "bio": "General Surgeon",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "uma-lakshmi",
-    slug: "dr-uma-lakshmi-damodar",
-    name: "Dr. Uma Lakshmi Damodar",
-    speciality: "Paediatrics",
-    departmentSlug: "paediatrics",
-    experience: "14+ Years",
-    image: "/carmel_doc/Dr.Uma-Lakshmi-Damodar-500x500.webp",
-    qualifications: ["MD (Paediatrics)"],
-    bio: "Dr. Uma Lakshmi Damodar is a dedicated paediatrician specializing in neonatal care and childhood illnesses. Her warm, patient-centric approach ensures children and families feel supported throughout their healthcare journey.",
-    consultationHours: "Mon - Sat: 10:00 AM - 2:00 PM",
-    languages: ["English", "Malayalam", "Tamil"],
+    "id": "dr-santhakumari-k",
+    "slug": "dr-santhakumari-k",
+    "name": "Dr. Santhakumari K",
+    "speciality": "Gynaecology",
+    "departmentSlug": "gynaecology",
+    "experience": "25+ Years",
+    "image": "/carmel_doc/Dr.Santhakumari-K-500x500.webp",
+    "qualifications": [
+      "MBBS DGO"
+    ],
+    "bio": "Dr. Santhakumari K is a skilled and compassionate obstetrician and gynecologist. She holds an MBBS degree and a DGO (Diploma in Obstetrics and Gynecology) from reputable institutions in India.\n\nWith years of experience in the field, Dr. Santhakumari specializes in the management of a wide range of gynecological conditions, including menstrual disorders, infertility, and menopause. She is also skilled in performing routine obstetric and gynecological procedures, such as prenatal care, labor and delivery, and postpartum care.\n\nDr. Santhakumari is committed to providing personalized care to her patients, and takes the time to understand their unique needs and concerns. She is known for her compassionate and patient-centered approach to care, and her ability to provide support and guidance throughout all stages of a woman’s reproductive life. She worked as Kottayam MC Family Planning Medical Officer in Govt. Sector for 5 Yrs, State Award- Family Planning Programme in the Kerala Govt. Health Service. She conducted Laparoscopic Sterilization Camps in different institutions around Kottayam Dist during the period of 1992- 2004, Classes on various topics like family planning, infectious diseases, communicable diseases, immunization programme… MTP Training, laparoscopy, ultrasound, Leprosy Training, TB control Programme… She has conducted more than 20,000 deliveries…\n\nIn addition to her clinical work, Dr. Santhakumari is actively involved in medical education and training. She is dedicated to mentoring and training young doctors in the field of obstetrics and gynecology, and is committed to advancing the field through her work.\n\nOverall, Dr. Santhakumari.K is a highly respected and trusted obstetrician and gynecologist with a passion for providing the highest quality care to her patients. Her expertise, compassion, and dedication to her patients and the field of obstetrics and gynecology make her a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "vilesh-valson",
-    slug: "dr-vilesh-valson",
-    name: "Dr. Vilesh Valson",
-    speciality: "Orthopaedics",
-    departmentSlug: "orthopaedics",
-    experience: "11+ Years",
-    image: "/carmel_doc/Dr.Vilesh-Valson-500x500.webp",
-    qualifications: ["MS (Orthopaedics)", "Fellowship in Arthroscopy"],
-    bio: "Dr. Vilesh Valson is a dynamic orthopaedic surgeon with expertise in arthroscopic surgery, trauma care, and sports medicine. He is passionate about restoring mobility and quality of life through precision surgical techniques.",
-    consultationHours: "Mon - Sat: 2:00 PM - 6:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-sr-litty-maria",
+    "slug": "dr-sr-litty-maria",
+    "name": "Dr. Sr. Litty Maria",
+    "speciality": "General Medicine",
+    "departmentSlug": "general-medicine",
+    "experience": "15+ Years",
+    "image": "/carmel_doc/Dr.Sr_.Litty-Maria-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MD",
+      "DIP BNB"
+    ],
+    "bio": "Dr. Sr. Litty Maria is a highly skilled and experienced physician with a passion for providing exceptional care to her patients. She holds an MBBS degree and an MD in General Medicine, as well as a Diploma in Basic Neurology and a Fellowship in Medical Ethics.\n\nWith years of experience in the field, Dr. Maria specializes in the diagnosis and treatment of a wide range of medical conditions, including hypertension, diabetes, respiratory diseases, and infectious diseases. She is also skilled in performing a variety of medical procedures, such as echocardiography, stress testing, and electroencephalography.\n\nAs a physician, Dr. Maria is committed to providing personalized care to each of her patients. She takes the time to understand their medical history and individual needs, and works closely with them to develop a comprehensive treatment plan. She is known for her compassionate and patient-centered approach to care, and her ability to communicate complex medical information in a clear and understandable way.\n\nIn addition to her clinical work, Dr. Maria is a dedicated medical administrator, serving as a Medical Superintendent in a leading hospital. She is responsible for overseeing the operations of the hospital and ensuring that patients receive the highest quality care. She is also actively involved in medical education and training, and is committed to mentoring and training young doctors in the field of general medicine.\n\nOverall, Dr. Sr. Litty Maria is a highly respected and trusted physician with a passion for providing the highest quality care to her patients. Her expertise, compassion, and dedication to her patients and the field of medicine make her a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "yashna-v",
-    slug: "dr-yashna-v",
-    name: "Dr. Yashna V.",
-    speciality: "Dermatology",
-    departmentSlug: "dermatology",
-    experience: "7+ Years",
-    image: "/carmel_doc/Dr.Yashna-V.webp",
-    qualifications: ["MD (Dermatology)"],
-    bio: "Dr. Yashna V. is a young and dynamic dermatologist with a focus on clinical and aesthetic dermatology. She brings fresh perspectives and the latest treatment approaches to skin, hair, and nail care.",
-    consultationHours: "Mon - Sat: 2:00 PM - 6:00 PM",
-    languages: ["English", "Malayalam", "Hindi"],
+    "id": "dr-sr-sheela-maria",
+    "slug": "dr-sr-sheela-maria",
+    "name": "Dr. Sr. Sheela Maria",
+    "speciality": "Anaesthesia",
+    "departmentSlug": "anaesthesia",
+    "experience": "20+ Years",
+    "image": "/carmel_doc/Dr.Sr_.Sheela-Maria-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "DA"
+    ],
+    "bio": "Dr. Sr. Sheela Maria is a highly skilled and experienced anesthesiologist with a passion for providing exceptional care to her patients. She holds an MBBS degree and a Diploma in Anesthesiology (DA) from prestigious institutions in India.\n\nWith years of experience in the field, Dr. Sr. Sheela Maria specializes in providing anesthesia for a wide range of medical procedures, including surgeries, diagnostic tests, and pain management procedures. She is known for her expertise in administering various types of anesthesia, such as general, regional, and local anesthesia, and her ability to monitor patients’ vital signs during procedures to ensure their safety and comfort.\n\nAs an anesthesiologist, Dr. Sr. Sheela Maria is committed to providing personalized care to each of her patients. She takes the time to understand their medical history and individual needs, and works closely with them to develop a comprehensive anesthesia plan. She is known for her compassionate and patient-centered approach to care, and her ability to communicate complex medical information in a clear and understandable way.\n\nDr. Sr. Sheela Maria is actively involved in medical education and training, and is dedicated to mentoring and training young doctors in the field of anesthesiology. She is also committed to staying up-to-date with the latest advancements in anesthesia technology and techniques, and regularly attends medical conferences and workshops to enhance her skills and knowledge. Training youngsters in the field of Anaesthesiology, medicine & nursing. She is also involved in Basic life support training in & out the medical community. External Faculty cum Asst Prof in CCON & Evaluator in KUHS for Anatomy, Genetics & Pathology. NALS : Successfully completed Advance Cardio-Vascular Life support (ACLS)& Basic Life Support (BLS) programmes. Resource person in Basic Life Support programme. Member of IMA, ISA & SDFI.\n\nOverall, Dr. Sr. Sheela Maria is a highly respected and trusted anesthesiologist with a passion for providing the highest quality care to her patients. Her expertise, compassion, and dedication to her patients and the field of anesthesiology make her a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
   {
-    id: "jose-jimmy",
-    slug: "dr-jose-jimmy",
-    name: "Dr. Jose Jimmy",
-    speciality: "General Surgery",
-    departmentSlug: "general-surgery",
-    experience: "13+ Years",
-    image: "/carmel_doc/Dr.Jose-Jimmy-500x500.webp",
-    qualifications: ["MS (General Surgery)"],
-    bio: "Dr. Jose Jimmy is a skilled general surgeon with extensive experience in both elective and emergency surgical procedures. He is known for his meticulous surgical technique and dedication to patient outcomes.",
-    consultationHours: "Mon - Sat: 9:00 AM - 1:00 PM",
-    languages: ["English", "Malayalam"],
+    "id": "dr-sr-soumya-thomas",
+    "slug": "dr-sr-soumya-thomas",
+    "name": "Dr. Sr. Soumya Thomas",
+    "speciality": "Gynaecology",
+    "departmentSlug": "gynaecology",
+    "experience": "12+ Years",
+    "image": "/carmel_doc/Dr.Sr_.Soumya-Thomas-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MS (GYNAECOLOGY)"
+    ],
+    "bio": "Dr. Sr. Soumya Thomas is a highly skilled and experienced gynecologist with a passion for providing exceptional care to her patients. She holds an MBBS degree and an MS in Gynecology from prestigious institutions in India.\n\nWith years of experience in the field, Dr. Sr. Soumya Thomas specializes in the diagnosis and treatment of a wide range of gynecological conditions, including menstrual disorders, infertility, pregnancy-related complications, and gynecological cancers. She is also skilled in performing various gynecological procedures, such as hysterectomy, colposcopy, and laparoscopy.\n\nAs a gynecologist, Dr. Sr. Soumya Thomas is committed to providing personalized care to each of her patients. She takes the time to understand their medical history and individual needs, and works closely with them to develop a comprehensive treatment plan. She is known for her compassionate and patient-centered approach to care, and her ability to communicate complex medical information in a clear and understandable way.\n\nDr. Thomas is actively involved in medical education and training, and is dedicated to mentoring and training young doctors in the field of gynecology. She is also committed to staying up-to-date with the latest advancements in gynecological technology and techniques, and regularly attends medical conferences and workshops to enhance her skills and knowledge.\n\nOverall, Dr. Sr. Soumya Thomas is a highly respected and trusted gynecologist with a passion for providing the highest quality care to her patients. Her expertise, compassion, and dedication to her patients and the field of gynecology make her a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
   },
+  {
+    "id": "dr-uma-lakshmi-damodar",
+    "slug": "dr-uma-lakshmi-damodar",
+    "name": "Dr. Uma Lakshmi Damodar",
+    "speciality": "ENT",
+    "departmentSlug": "ent",
+    "experience": "14+ Years",
+    "image": "/carmel_doc/Dr.Uma-Lakshmi-Damodar-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "MS"
+    ],
+    "bio": "Dr. Uma Lakshmi Damodar is a highly skilled and experienced ENT specialist with a passion for providing exceptional care to her patients. She holds an MBBS degree and an MS in Otorhinolaryngology (ENT) from Govt. MC TVM PG: Govt. MC(BMC) Bangalore.\n\nWith years of experience in the field, Dr. Uma specializes in the diagnosis and treatment of a wide range of ear, nose, and throat conditions, including chronic sinusitis, hearing loss, tonsillitis, and vocal cord disorders. She is also skilled in performing various ENT procedures, such as endoscopic sinus surgery, tonsillectomy, and myringotomy. She was the Asst. Professor of Dept. of ENT at SNIMS, Manjaly.\n\nAs an ENT specialist, Dr. Uma is committed to providing personalized care to each of her patients. She takes the time to understand their medical history and individual needs, and works closely with them to develop a comprehensive treatment plan. She is known for her compassionate and patient-centered approach to care, and her ability to communicate complex medical information in a clear and understandable way.\n\nDr. Uma is actively involved in medical education and training, and is dedicated to mentoring and training young doctors in the field of ENT. She is also committed to staying up-to-date with the latest advancements in ENT technology and techniques, and regularly attends medical conferences and workshops to enhance her skills and knowledge.\n\nOverall, Dr. Uma is a highly respected and trusted ENT specialist with a passion for providing the highest quality care to her patients. Her expertise, compassion, and dedication to her patients and the field of ENT make her a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
+  },
+  {
+    "id": "dr-vilesh-valsalan",
+    "slug": "dr-vilesh-valsalan",
+    "name": "Dr. Vilesh Valsalan",
+    "speciality": "Nephrology",
+    "departmentSlug": "nephrology",
+    "experience": "11+ Years",
+    "image": "/carmel_doc/Dr.Vilesh-Valson-500x500.webp",
+    "qualifications": [
+      "MBBS",
+      "DNB MEDICINE",
+      "DNB"
+    ],
+    "bio": "Dr. Vilesh Valsalan is a highly skilled and experienced consultant nephrologist and transplant physician, with a passion for providing exceptional care to his patients. He holds an MBBS degree, as well as DNB qualifications in both medicine and nephrology, and is also a certified Family Nurse Practitioner (FNP) from the USA.\n\nDr. Vilesh  completed his Masters in Nephrology from Jaslok Hospital & Research Center in Mumbai in 2013, and since then has been associated with various hospitals and dialysis units in and around Kochi. He is currently a consultant nephrologist at Specialist Hospital Kochi, and is also a visiting faculty member at the Samaritan College of Nursing and Dialysis Technician Course.\n\nAs a specialist in the diagnosis and treatment of kidney-related conditions, Dr. Vilesh is committed to providing personalized care to each of his patients. He is known for his compassionate and patient-centered approach to care, and his ability to communicate complex medical information in a clear and understandable way.\n\nDr. Vilesh’s expertise in the field of nephrology has enabled him to look after more than 3000 dialysis sessions per month, and he is part of a team with the maximum number of cadaver transplants in the state. He has also authored chapters in textbooks and published articles in leading medical journals, and is actively involved in research and education in the field of nephrology.\n\nOverall, Dr. Vilesh Valsalan is a highly respected and trusted nephrologist and transplant physician, with a passion for providing the highest quality care to his patients. His expertise, compassion, and dedication to his patients and the field of nephrology make him a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
+  },
+  {
+    "id": "dr-vinod-thomas",
+    "slug": "dr-vinod-thomas",
+    "name": "Dr. Vinod Thomas",
+    "speciality": "Cardiology",
+    "departmentSlug": "cardiology",
+    "experience": "20+ Years",
+    "image": "/carmel_doc/Dr.Vinod-Thomas-500x500.webp",
+    "qualifications": [
+      "MD",
+      "DNB",
+      "DM",
+      "FACC"
+    ],
+    "bio": "Dr. Vinod Thomas is a highly accomplished and experienced interventional cardiologist, with an MD, DNB, and DM in Cardiology, as well as FACC credentials. He is widely recognized for his expertise in the diagnosis and treatment of complex heart conditions, and has helped countless patients to improve their heart health and overall well-being.\n\nAs a senior consultant interventional cardiologist, Dr. Thomas is dedicated to providing personalized care to each of his patients. He specializes in a range of procedures, including angioplasty, stenting, and other minimally invasive techniques, and has a particular interest in treating patients with complex coronary artery disease.\n\nDr. Thomas completed his MD and DNB in General Medicine from the prestigious Christian Medical College in Vellore, and went on to complete his DM in Cardiology from the same institution. He is also a fellow of the American College of Cardiology (FACC), and has extensive experience working in some of the most renowned cardiac care centers in India and abroad.\n\nDr. Thomas is known for his compassionate and patient-centered approach to care, and is committed to providing his patients with the highest quality treatment and support. He is highly respected in the medical community for his expertise and dedication, and is frequently called upon to speak at conferences and events on the latest advances in interventional cardiology.\n\nOverall, Dr. Vinod Thomas is a highly skilled and respected interventional cardiologist, with a commitment to providing exceptional care to his patients. His extensive experience, compassionate approach, and dedication to advancing the field of interventional cardiology make him a valued member of the medical community.",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
+  },
+  {
+    "id": "dr-sreedhanya",
+    "slug": "dr-sreedhanya",
+    "name": "Dr.sreedhanya",
+    "speciality": "Ophthalmology",
+    "departmentSlug": "ophthalmology",
+    "experience": "10+ Years",
+    "image": "/carmel_doc/sree.webp",
+    "qualifications": [
+      "MBBS",
+      "PG DIPLOMA IN OPHTHALMOLOGY"
+    ],
+    "bio": "Experienced ophthalmologist with passion for helping patients improve eye health and functionality through preventative and corrective care",
+    "consultationHours": "Contact hospital for timings",
+    "languages": [
+      "English",
+      "Malayalam"
+    ]
+  }
 ];
 
 export function getDoctorBySlug(slug: string): Doctor | undefined {

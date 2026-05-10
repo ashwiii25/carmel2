@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const NAV_LINKS = [
   { name: "Legacy", href: "/about" },
@@ -17,6 +18,8 @@ const NAV_LINKS = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,20 +32,33 @@ export function Header() {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6",
-        isScrolled || isMenuOpen ? "bg-background/95 backdrop-blur-md border-b border-primary/5 py-4" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700 py-6",
+        isScrolled || isMenuOpen 
+          ? "bg-background/90 backdrop-blur-xl border-b border-primary/5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.03)]" 
+          : "bg-transparent"
       )}
     >
-      <div className="container-custom flex items-center justify-between">
+      {/* Top Gradient Overlay for Visibility */}
+      {!isScrolled && !isMenuOpen && (
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent pointer-events-none -z-10 h-40" />
+      )}
+
+      <div className="container-custom flex items-center justify-between relative z-10">
         <Link href="/" className="group flex items-center">
-          <img 
-            src="/carmel_dept/main_logo-1-scaled.webp" 
-            alt="Carmel Hospital Logo" 
-            className={cn(
-              "transition-all duration-500 object-contain w-auto",
-              isScrolled ? "h-10 md:h-12" : "h-14 md:h-20"
+          <div className="relative">
+            <img 
+              src="/carmel_dept/main_logo-1-scaled.webp" 
+              alt="Carmel Hospital Logo" 
+              className={cn(
+                "transition-all duration-700 object-contain w-auto",
+                isScrolled ? "h-10 md:h-12" : "h-14 md:h-20"
+              )}
+            />
+            {/* Subtle glow for logo when on dark backgrounds */}
+            {!isScrolled && !isMenuOpen && (
+              <div className="absolute inset-0 bg-white/10 blur-xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
             )}
-          />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -52,37 +68,43 @@ export function Header() {
               key={link.name}
               href={link.href}
               className={cn(
-                "text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:text-secondary",
-                isScrolled ? "text-primary" : "text-white drop-shadow-md"
+                "text-[11px] font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:text-secondary relative group",
+                isScrolled ? "text-primary" : "text-white"
               )}
             >
-              {link.name}
+              <span>{link.name}</span>
+              <span className={cn(
+                "absolute -bottom-1 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
+                isScrolled ? "bg-secondary" : "bg-white"
+              )} />
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-4 md:gap-8">
+        <div className="flex items-center gap-6 md:gap-10">
           <Link
             href="/emergency"
             className={cn(
-              "text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] border-b pb-1 transition-colors duration-300",
+              "group flex items-center gap-3 px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500",
               isScrolled || isMenuOpen
-                ? "text-primary border-primary/20 hover:border-primary" 
-                : "text-white border-white/20 hover:border-white drop-shadow-md"
+                ? "bg-primary text-white hover:bg-secondary hover:shadow-lg" 
+                : "bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white hover:text-primary"
             )}
           >
-            Emergency 24/7
+            <Phone className={cn("w-3 h-3 transition-transform group-hover:rotate-12", !isScrolled && "fill-current")} />
+            <span className="hidden sm:inline">Emergency 24/7</span>
+            <span className="sm:hidden">24/7</span>
           </Link>
 
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={cn(
-              "lg:hidden p-2 transition-colors",
-              isScrolled || isMenuOpen ? "text-primary" : "text-white"
+              "lg:hidden p-3 rounded-xl transition-all duration-500",
+              isScrolled || isMenuOpen ? "text-primary bg-primary/5" : "text-white bg-white/10 backdrop-blur-md"
             )}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -91,13 +113,13 @@ export function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:hidden bg-background border-b border-primary/5 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b border-primary/5 overflow-hidden shadow-2xl"
           >
-            <div className="container-custom py-12 flex flex-col gap-8">
+            <div className="container-custom py-16 flex flex-col gap-10">
               {NAV_LINKS.map((link, index) => (
                 <motion.div
                   key={link.name}
@@ -108,12 +130,29 @@ export function Header() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-2xl font-bold text-primary hover:text-secondary transition-colors"
+                    className="group flex items-center justify-between text-3xl font-bold text-primary hover:text-secondary transition-all"
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    <div className="w-12 h-px bg-primary/10 group-hover:bg-secondary group-hover:w-20 transition-all" />
                   </Link>
                 </motion.div>
               ))}
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="pt-10 border-t border-primary/5"
+              >
+                <Link 
+                  href="/emergency" 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center justify-center gap-4 py-6 bg-[#8B0000] text-white rounded-2xl font-black uppercase tracking-[0.4em] text-xs shadow-xl"
+                >
+                  <Phone size={16} />
+                  Emergency Hotline
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}
