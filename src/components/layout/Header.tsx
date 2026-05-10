@@ -51,7 +51,7 @@ export function Header() {
               alt="Carmel Hospital Logo" 
               className={cn(
                 "transition-all duration-700 object-contain w-auto",
-                isScrolled ? "h-10 md:h-12" : "h-14 md:h-20"
+                isScrolled ? "h-12 md:h-16" : "h-14 md:h-20"
               )}
             />
             {/* Subtle glow for logo when on dark backgrounds */}

@@ -16,7 +16,7 @@ export const doctors: Doctor[] = [
   {
     "id": "dr-nithya-nathan",
     "slug": "dr-nithya-nathan",
-    "name": "Dr Nithya Nathan",
+    "name": "Dr. Nithya Nathan",
     "speciality": "Dermatology",
     "departmentSlug": "dermatology",
     "experience": "16+ Years",
@@ -35,7 +35,7 @@ export const doctors: Doctor[] = [
   {
     "id": "dr-yashna-v",
     "slug": "dr-yashna-v",
-    "name": "Dr Yashna V",
+    "name": "Dr. Yashna V",
     "speciality": "Dermatology",
     "departmentSlug": "dermatology",
     "experience": "7+ Years",
@@ -495,7 +495,7 @@ export const doctors: Doctor[] = [
   {
     "id": "dr-sreedhanya",
     "slug": "dr-sreedhanya",
-    "name": "Dr.sreedhanya",
+    "name": "Dr. Sreedhanya",
     "speciality": "Ophthalmology",
     "departmentSlug": "ophthalmology",
     "experience": "10+ Years",

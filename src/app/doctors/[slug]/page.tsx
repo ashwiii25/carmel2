@@ -141,7 +141,7 @@ export default async function DoctorProfilePage({ params }: Props) {
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Experience Profile</h4>
                   </div>
                   <p className="text-lg font-light text-foreground/60 leading-relaxed">
-                    With over {doc.experience} of dedicated practice, Dr. {doc.name.split('. ')[1]} has been a cornerstone of the medical community, specializing in advanced {doc.speciality.toLowerCase()} care.
+                    With over {doc.experience} of dedicated practice, {doc.name} has been a cornerstone of the medical community, specializing in advanced {doc.speciality.toLowerCase()} care.
                   </p>
                 </div>
               </div>

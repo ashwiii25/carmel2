@@ -47,7 +47,7 @@ export function CinematicHero({ title, subtitle, image, breadcrumbs, actions }: 
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] w-full overflow-hidden bg-black text-white flex flex-col items-center justify-center text-center pb-16 md:pb-20">
+    <section className="relative min-h-[100dvh] w-full overflow-hidden bg-black text-white flex flex-col text-center pb-16 md:pb-20">
       {/* Background Image with Ken Burns Effect */}
       <div className="absolute inset-0 z-0">
         <motion.div
@@ -73,34 +73,47 @@ export function CinematicHero({ title, subtitle, image, breadcrumbs, actions }: 
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>
 
-      {/* Content */}
-      <div className="container-custom relative z-20 w-full h-full flex flex-col">
-        {/* Breadcrumbs - Top Left below Navbar */}
-        <nav className="pt-24 sm:pt-28 flex items-center gap-2 flex-wrap">
+      {/* Content wrapper */}
+      <div className="container-custom relative z-20 w-full flex-1 flex flex-col">
+        {/* Breadcrumbs - Normal Flow */}
+        <nav className="w-full pt-[116px] md:pt-[140px] pb-4 flex items-center justify-start gap-2 flex-wrap">
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 flex-wrap"
           >
             <Link 
               href="/" 
-              className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-secondary transition-colors"
+              className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors whitespace-nowrap"
             >
               Home
             </Link>
-            {breadcrumbs.map((item) => (
-              <div key={item.label} className="flex items-center gap-2">
-                <ChevronRight className="w-3 h-3 text-white/20" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary">
-                  {item.label}
-                </span>
-              </div>
-            ))}
+            {breadcrumbs.map((item, index) => {
+              const isLast = index === breadcrumbs.length - 1;
+              return (
+                <div key={item.label} className="flex items-center gap-2">
+                  <ChevronRight className="w-3 h-3 text-white/30 flex-shrink-0" />
+                  {item.href && !isLast ? (
+                    <Link 
+                      href={item.href}
+                      className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors whitespace-nowrap"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-secondary whitespace-nowrap">
+                      {item.label}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </motion.div>
         </nav>
 
-        <div className="flex-1 flex flex-col items-center justify-center">
+        {/* Text Content vertically centered in remaining space */}
+        <div className="flex-1 flex flex-col items-center justify-center pt-8 md:pt-0">
           <h1 
             ref={titleRef} 
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 tracking-tight leading-[1.05] drop-shadow-2xl px-4"
