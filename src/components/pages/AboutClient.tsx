@@ -19,7 +19,7 @@ const VALUES = [
   { 
     title: "Legacy", 
     kicker: "03",
-    desc: "Over 25 years of steadfast commitment to the health and well-being of the Aluva community." 
+    desc: "Over 60 years of steadfast commitment to the health and well-being of the Aluva community." 
   },
   { 
     title: "Integrity", 
@@ -48,7 +48,7 @@ export function AboutClient() {
             <SectionHeader 
               kicker="Our Philosophy"
               title="Healing is not just a science, it's a commitment to life."
-              description="Founded in 1998, Carmel Hospital was born from a vision to provide international-standard healthcare accessible to all. We believe in treating the person, not just the symptom."
+              description="Founded in 1965, Carmel Hospital was born from a vision to provide international-standard healthcare accessible to all. We believe in treating the person, not just the symptom."
             />
             
             <div className="relative group">
@@ -116,7 +116,7 @@ export function AboutClient() {
                 className="pl-12 relative"
               >
                 <div className="absolute left-[-4px] top-2 w-2 h-2 bg-secondary rounded-full" />
-                <span className="block text-[10px] font-black tracking-[0.3em] text-secondary mb-2">1998</span>
+                <span className="block text-[10px] font-black tracking-[0.3em] text-secondary mb-2">1965</span>
                 <h4 className="text-2xl font-bold mb-4 text-primary">Foundation Stone</h4>
                 <p className="text-lg font-light text-foreground/60 leading-relaxed">Carmel Hospital opens its doors as a 50-bed multi-speciality center in Aluva, driven by humanitarian values.</p>
               </motion.div>

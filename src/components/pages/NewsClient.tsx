@@ -2,41 +2,26 @@
 
 import { CinematicHero } from "@/components/shared/CinematicHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { Calendar } from "lucide-react";
+import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-const ARTICLES = [
-  {
-    title: "Understanding Cardiovascular Health in the Digital Age",
-    category: "Medical Insights",
-    date: "May 10, 2026",
-    desc: "How modern lifestyles are impacting heart health and the steps we can take to mitigate risks through technology and prevention.",
-    image: "/hero_slideshow/pexels-cedric-fauntleroy-4270086.webp"
-  },
-  {
-    title: "The Future of Minimally Invasive Surgery",
-    category: "Innovation",
-    date: "April 28, 2026",
-    desc: "An inside look at how robotic assistance and advanced laparoscopy are reducing recovery times and improving patient outcomes.",
-    image: "/hero_slideshow/ey-doctors-in-discussion-in-hospital.webp"
-  },
-  {
-    title: "Compassionate Care: The Heart of Nursing at Carmel",
-    category: "Hospital Life",
-    date: "April 15, 2026",
-    desc: "Celebrating the dedicated nursing staff who bring healing and comfort to our patients every single day.",
-    image: "/hero_slideshow/pexels-imadclicks-14558557.webp"
-  },
-  {
-    title: "Pediatric Wellness: A Guide for New Parents",
-    category: "Family Health",
-    date: "March 30, 2026",
-    desc: "Essential tips for infant health management and understanding the developmental milestones of early childhood.",
-    image: "/hero_slideshow/eb-website-image-hero-3840x2560.webp"
-  }
-];
+import { useRef } from "react";
+import { ARTICLES } from "@/data/news";
 
 export function NewsClient() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
+
   return (
     <main className="bg-background">
       <CinematicHero 
@@ -51,13 +36,36 @@ export function NewsClient() {
 
       <section id="latest-news" className="section-padding">
         <div className="container-custom">
-          <SectionHeader 
-            kicker="The Pulse"
-            title="Latest from our medical desk."
-            description="Expert perspectives on health, innovation, and community well-being."
-          />
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+            <SectionHeader 
+              kicker="The Pulse"
+              title="Latest from our medical desk."
+              description="Expert perspectives on health, innovation, and community well-being."
+            />
+            
+            <div className="flex items-center gap-4">
+              <button 
+                onClick={scrollLeft}
+                className="w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={scrollRight}
+                className="w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 lg:gap-24 mt-16 md:mt-24">
+          <div 
+            ref={scrollRef}
+            className="flex overflow-x-auto gap-8 md:gap-12 pb-12 snap-x snap-mandatory hide-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {ARTICLES.map((art, idx) => (
               <motion.div 
                 key={art.title} 
@@ -65,9 +73,9 @@ export function NewsClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="group cursor-pointer"
+                className="group cursor-pointer min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-start flex-shrink-0"
               >
-                <div className="img-reveal rounded-3xl aspect-video overflow-hidden mb-12 shadow-2xl border-thin">
+                <div className="img-reveal rounded-3xl aspect-video overflow-hidden mb-8 shadow-2xl border-thin">
                   <img 
                     src={art.image} 
                     alt={art.title} 
@@ -75,7 +83,7 @@ export function NewsClient() {
                   />
                 </div>
                 
-                <div className="flex items-center gap-6 mb-8">
+                <div className="flex items-center gap-6 mb-6">
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">{art.category}</span>
                   <div className="flex items-center gap-3 text-[10px] font-bold text-foreground/20 uppercase tracking-[0.2em]">
                     <Calendar className="w-3.5 h-3.5" />
@@ -83,11 +91,11 @@ export function NewsClient() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-6 md:mb-8 group-hover:text-secondary transition-colors duration-500 leading-tight tracking-tight">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors duration-500 leading-tight tracking-tight">
                   {art.title}
                 </h3>
                 
-                <p className="text-lg font-light text-foreground/60 leading-relaxed mb-10">
+                <p className="text-base font-light text-foreground/60 leading-relaxed mb-8 line-clamp-3">
                   {art.desc}
                 </p>
                 
@@ -99,7 +107,7 @@ export function NewsClient() {
             ))}
           </div>
 
-          <div className="mt-32 pt-24 border-t border-primary/5 text-center">
+          <div className="mt-8 pt-16 border-t border-primary/5 text-center">
             <button className="group flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] px-12 py-6 bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all duration-500 rounded-full mx-auto">
               <span>Load Older Articles</span>
               <div className="w-6 h-px bg-primary/20 group-hover:bg-white/20 group-hover:w-10 transition-all duration-500" />

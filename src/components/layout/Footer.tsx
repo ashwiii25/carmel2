@@ -14,7 +14,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-white/40 text-xs tracking-widest leading-relaxed max-w-[200px]">
-              Estd. 1998. Committed to excellence in medical care and human compassion.
+              Estd. 1965. Committed to excellence in medical care and human compassion.
             </p>
           </div>
 

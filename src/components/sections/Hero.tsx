@@ -17,31 +17,40 @@ const HERO_IMAGES = [
   "/hero_slideshow/ed8f1c912abec340f3e692008c2999b1e5bfee2e-3840x2560.webp",
 ];
 
+const SLIDE_DURATION = 6000; // ms — keep in sync with setInterval
+
 export function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [tickKey, setTickKey] = useState(0); // re-mounts the progress animation each slide
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 6000);
+      setTickKey((k) => k + 1);
+    }, SLIDE_DURATION);
     return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
     if (titleRef.current) {
-      gsap.fromTo(titleRef.current.children, 
+      gsap.fromTo(titleRef.current.children,
         { y: 100, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          stagger: 0.1, 
-          duration: 1.5, 
-          ease: "power4.out" 
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 1.5,
+          ease: "power4.out",
         }
       );
     }
   }, []);
+
+  const goToSlide = (index: number) => {
+    setCurrentImage(index);
+    setTickKey((k) => k + 1);
+  };
 
   return (
     <section className="relative h-[100dvh] min-h-[600px] w-full overflow-hidden bg-black text-white">
@@ -59,8 +68,8 @@ export function Hero() {
             <motion.div
               initial={{ scale: 1.2 }}
               animate={{ scale: 1.1 }}
-              transition={{ 
-                scale: { duration: 8, ease: "linear" }
+              transition={{
+                scale: { duration: 8, ease: "linear" },
               }}
               className="absolute inset-0 w-full h-full"
             >
@@ -76,7 +85,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
         </AnimatePresence>
-        
+
         {/* Consistent 37% Overlay */}
         <div className="absolute inset-0 bg-black/[0.37] z-10" />
       </div>
@@ -88,7 +97,7 @@ export function Hero() {
             <span className="block opacity-90">Healing with</span>
             <span className="block font-bold">Heart.</span>
           </h1>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,6 +110,48 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Slideshow Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.4, duration: 0.9, ease: "easeOut" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-4 py-2 rounded-full"
+        style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)" }}
+        role="tablist"
+        aria-label="Slideshow navigation"
+      >
+        {HERO_IMAGES.map((_, index) => {
+          const isActive = index === currentImage;
+          return (
+            <button
+              key={index}
+              role="tab"
+              aria-selected={isActive}
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}
+              className="relative overflow-hidden rounded-full focus:outline-none cursor-pointer"
+              style={{
+                width: isActive ? 24 : 6,
+                height: 6,
+                background: isActive ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.4)",
+                transition: "width 0.4s ease",
+              }}
+            >
+              {isActive && (
+                <motion.span
+                  key={tickKey}
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
+                  className="absolute inset-0 origin-left rounded-full bg-white"
+                />
+              )}
+            </button>
+          );
+        })}
+      </motion.div>
     </section>
   );
 }
+

@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { name: "Expertise", href: "/departments" },
   { name: "Specialists", href: "/doctors" },
   { name: "Care", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];
 

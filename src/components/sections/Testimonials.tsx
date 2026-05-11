@@ -24,7 +24,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             className="text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-12"
           >
-            Human Impact
+            Testimonials
           </motion.h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 text-left">

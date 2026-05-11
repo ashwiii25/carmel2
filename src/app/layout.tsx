@@ -34,8 +34,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${lato.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen font-sans bg-background text-foreground selection:bg-secondary selection:text-primary">
+      <body className="min-h-screen font-sans bg-background text-foreground selection:bg-secondary selection:text-primary" suppressHydrationWarning>
         <Header />
         <SmoothScroll>{children}</SmoothScroll>
         <Footer />
