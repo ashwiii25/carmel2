@@ -1,17 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function Emergency() {
   return (
-    <section id="emergency" className="section-padding bg-[#8B0000] text-white relative overflow-hidden">
-      {/* Background Image Overlay - Full Color but Low Opacity for Text Contrast */}
-      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
-        <img src="/carmel_dept/Emergency-Medicine-580x360.webp" alt="Emergency" className="w-full h-full object-cover" />
+    <section className="relative h-[500px] md:h-[600px] overflow-hidden bg-black text-white">
+      <div className="absolute inset-0 z-0">
+        <Image src="/carmel_dept/Emergency-Medicine-580x360.webp" alt="Emergency" fill sizes="100vw" className="object-cover opacity-60" />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 h-full flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

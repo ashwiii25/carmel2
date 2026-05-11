@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const SERVICES = [
   {
@@ -55,11 +56,13 @@ export function Services() {
               transition={{ delay: index * 0.2, duration: 1 }}
               className="group"
             >
-              <div className="img-reveal aspect-[16/10] mb-8 border-thin shadow-md">
-                <img 
+              <div className="img-reveal aspect-[16/10] mb-8 border-thin shadow-md relative overflow-hidden">
+                <Image 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
               <h4 className="text-2xl mb-4 font-serif">{service.title}</h4>

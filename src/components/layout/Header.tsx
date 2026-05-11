@@ -2,12 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
-const NAV_LINKS = [
+interface NavLink {
+  name: string;
+  href: string;
+  external?: boolean;
+  compact?: boolean;
+}
+
+const NAV_LINKS: NavLink[] = [
   { name: "About", href: "/about" },
   { name: "Departments", href: "/departments" },
   { name: "Our Doctors", href: "/doctors" },
@@ -16,7 +24,7 @@ const NAV_LINKS = [
   { name: "Contact", href: "/contact" },
 ];
 
-const PDF_LINK = {
+const PDF_LINK: NavLink = {
   name: "Annual Report",
   href: "/BMW-ANNUAL-REPORT-2022.pdf",
   external: true,
@@ -57,9 +65,12 @@ export function Header() {
       <div className="container-custom flex items-center justify-between relative z-10">
         <Link href="/" className="group flex items-center">
           <div className="relative">
-            <img 
+            <Image 
               src="/carmel_dept/main_logo-1-scaled.webp" 
               alt="Carmel Hospital Logo" 
+              width={200}
+              height={80}
+              priority
               className={cn(
                 "transition-all duration-700 object-contain w-auto",
                 isScrolled ? "h-12 md:h-16" : "h-14 md:h-20"

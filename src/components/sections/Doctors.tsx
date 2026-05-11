@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const DOCTORS = [
   {
@@ -54,11 +55,13 @@ export function Doctors() {
               transition={{ delay: index * 0.15, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="group cursor-pointer"
             >
-              <div className="img-reveal aspect-square mb-8 border-thin shadow-xl">
-                <img 
+              <div className="img-reveal aspect-square mb-8 border-thin shadow-xl relative overflow-hidden">
+                <Image 
                   src={doc.image} 
                   alt={doc.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col">

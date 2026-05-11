@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const DEPARTMENTS = [
   { id: "01", name: "Cardiology", focus: "Heart & Vascular Excellence", image: "/carmel_dept/Cardiology-580x360.webp" },
@@ -47,8 +48,8 @@ export function Departments() {
                 <h4 className="text-3xl mb-4 group-hover:text-secondary transition-colors duration-500">{dept.name}</h4>
                 <p className="text-xs uppercase tracking-widest text-white/40 group-hover:text-white/60 transition-colors duration-500 font-bold">{dept.focus}</p>
                 
-                <div className="mt-8 aspect-video img-reveal opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-lg">
-                  <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" />
+                <div className="mt-8 aspect-video img-reveal opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-lg relative">
+                  <Image src={dept.image} alt={dept.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
               </div>
               

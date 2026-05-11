@@ -5,6 +5,7 @@ import { CinematicHero } from "@/components/shared/CinematicHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { doctors } from "@/data/doctors";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -91,10 +92,12 @@ export function DoctorsClient() {
                     href={`/doctors/${doc.slug}`}
                     className="group block bg-white rounded-3xl overflow-hidden border border-primary/5 hover:border-secondary/20 transition-all duration-700 hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] h-full"
                   >
-                    <div className="aspect-square overflow-hidden transition-all duration-1000 border-b border-primary/5">
-                      <img 
+                    <div className="aspect-square overflow-hidden transition-all duration-1000 border-b border-primary/5 relative">
+                      <Image 
                         src={doc.image} 
                         alt={doc.name} 
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       />
                     </div>

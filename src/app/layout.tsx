@@ -18,8 +18,33 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Carmel Hospital | Excellence in Healthcare",
-  description: "Experience premium, compassionate, and advanced medical care at Carmel Hospital, Aluva.",
+  metadataBase: new URL('https://carmelhospital.org'),
+  title: {
+    default: "Carmel Hospital | Excellence in Healthcare",
+    template: "%s | Carmel Hospital"
+  },
+  description: "Experience premium, compassionate, and advanced medical care at Carmel Hospital, Aluva. Trusted healthcare excellence since 1965.",
+  keywords: ["Carmel Hospital", "Aluva Hospital", "Kerala Healthcare", "Cardiology Kerala", "Best Hospital in Aluva", "Emergency Care Kerala"],
+  openGraph: {
+    title: "Carmel Hospital | Excellence in Healthcare",
+    description: "Experience premium, compassionate, and advanced medical care at Carmel Hospital, Aluva.",
+    url: "https://carmelhospital.org",
+    siteName: "Carmel Hospital",
+    images: [
+      {
+        url: "/hero_slideshow/eb-website-image-hero-3840x2560.webp",
+        width: 1200,
+        height: 630,
+        alt: "Carmel Hospital Aluva",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 import { Header } from "@/components/layout/Header";

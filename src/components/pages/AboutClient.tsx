@@ -3,6 +3,7 @@
 import { CinematicHero } from "@/components/shared/CinematicHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const VALUES = [
@@ -53,9 +54,11 @@ export function AboutClient() {
             
             <div className="relative group">
               <div className="img-reveal rounded-3xl aspect-[4/5] shadow-2xl border-thin">
-                <img 
+                <Image 
                   src="/hero_slideshow/pexels-imadclicks-14558557.webp" 
                   alt="Nursing Excellence" 
+                  width={600}
+                  height={750}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
               </div>

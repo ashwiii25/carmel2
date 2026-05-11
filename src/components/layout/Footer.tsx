@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -54,9 +55,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 mb-24">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-8">
-              <img 
+              <Image 
                 src="/carmel_dept/main_logo-1-scaled.webp" 
                 alt="Carmel Hospital Logo" 
+                width={160}
+                height={64}
                 className="h-16 w-auto object-contain" 
               />
             </Link>
