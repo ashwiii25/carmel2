@@ -5,20 +5,35 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import { ARTICLES } from "@/data/news";
 
 export function NewsClient() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const getScrollAmount = () => {
+    if (!scrollRef.current) {
+      return 400;
+    }
+
+    const container = scrollRef.current;
+    const firstCard = container.querySelector<HTMLElement>("[data-news-card]");
+    const cardWidth = firstCard?.clientWidth ?? 400;
+    const gapValue = getComputedStyle(container).gap || getComputedStyle(container).columnGap || "0";
+    const gap = Number.parseFloat(gapValue) || 0;
+
+    return cardWidth + gap;
+  };
+
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+      scrollRef.current.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+      scrollRef.current.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     }
   };
 
@@ -73,36 +88,39 @@ export function NewsClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="group cursor-pointer min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-start flex-shrink-0"
+                className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-start flex-shrink-0"
+                data-news-card
               >
-                <div className="img-reveal rounded-3xl aspect-video overflow-hidden mb-8 shadow-2xl border-thin">
-                  <img 
-                    src={art.image} 
-                    alt={art.title} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                </div>
-                
-                <div className="flex items-center gap-6 mb-6">
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">{art.category}</span>
-                  <div className="flex items-center gap-3 text-[10px] font-bold text-foreground/20 uppercase tracking-[0.2em]">
-                    <Calendar className="w-3.5 h-3.5" />
-                    {art.date}
+                <Link href={`/news/${art.slug}`} className="group block cursor-pointer">
+                  <div className="img-reveal rounded-3xl aspect-video overflow-hidden mb-8 shadow-2xl border-thin">
+                    <img 
+                      src={art.image} 
+                      alt={art.title} 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    />
                   </div>
-                </div>
+                  
+                  <div className="flex items-center gap-6 mb-6">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">{art.category}</span>
+                    <div className="flex items-center gap-3 text-[10px] font-bold text-foreground/20 uppercase tracking-[0.2em]">
+                      <Calendar className="w-3.5 h-3.5" />
+                      {art.date}
+                    </div>
+                  </div>
 
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors duration-500 leading-tight tracking-tight">
-                  {art.title}
-                </h3>
-                
-                <p className="text-base font-light text-foreground/60 leading-relaxed mb-8 line-clamp-3">
-                  {art.desc}
-                </p>
-                
-                <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary group-hover:text-secondary transition-colors duration-500">
-                  <span>Read Full Article</span>
-                  <div className="w-8 h-px bg-primary/20 group-hover:bg-secondary group-hover:w-12 transition-all duration-500" />
-                </div>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors duration-500 leading-tight tracking-tight">
+                    {art.title}
+                  </h3>
+                  
+                  <p className="text-base font-light text-foreground/60 leading-relaxed mb-8 line-clamp-3">
+                    {art.desc}
+                  </p>
+                  
+                  <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] text-primary group-hover:text-secondary transition-colors duration-500">
+                    <span>Read Full Article</span>
+                    <div className="w-8 h-px bg-primary/20 group-hover:bg-secondary group-hover:w-12 transition-all duration-500" />
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

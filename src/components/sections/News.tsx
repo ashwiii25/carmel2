@@ -44,7 +44,7 @@ export function News() {
     <section id="latest-news" className="section-padding overflow-hidden bg-muted/30">
       <div className="container-custom">
         <div className="mb-12 lg:mb-16">
-          <div className="flex flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 lg:gap-8">
             <div className="max-w-2xl">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
@@ -66,22 +66,22 @@ export function News() {
               </motion.h2>
             </div>
             
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-3 shrink-0 mt-4 sm:mt-0">
               <button 
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-primary transition-all duration-300"
+                className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-primary transition-all duration-300"
                 aria-label="Scroll left"
               >
-                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </button>
               <button 
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-primary transition-all duration-300"
+                className="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-primary transition-all duration-300"
                 aria-label="Scroll right"
               >
-                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </button>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function News() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-foreground/60 leading-relaxed mt-4 max-w-2xl"
+            className="text-base sm:text-lg text-foreground/60 leading-relaxed mt-4 max-w-2xl"
           >
             Expert perspectives on health, innovation, and community well-being.
           </motion.p>
@@ -157,9 +157,9 @@ export function News() {
             href="/BMW-ANNUAL-REPORT-2022.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-primary/20 px-8 py-4 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-primary/20 px-5 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white max-w-full break-words text-center leading-snug"
           >
-            BMW-ANNUAL-REPORT-2022
+            BMW-ANNUAL-REPORT-2022.pdf
           </a>
         </div>
       </div>
