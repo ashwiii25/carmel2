@@ -152,16 +152,6 @@ export function News() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <a
-            href="/BMW-ANNUAL-REPORT-2022.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-primary/20 px-5 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white max-w-full break-words text-center leading-snug"
-          >
-            BMW-ANNUAL-REPORT-2022.pdf
-          </a>
-        </div>
       </div>
     </section>
   );

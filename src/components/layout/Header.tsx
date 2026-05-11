@@ -16,6 +16,16 @@ const NAV_LINKS = [
   { name: "Contact", href: "/contact" },
 ];
 
+const PDF_LINK = {
+  name: "Annual Report",
+  href: "/BMW-ANNUAL-REPORT-2022.pdf",
+  external: true,
+  compact: true,
+};
+
+const ALL_NAV_LINKS = [...NAV_LINKS, PDF_LINK];
+const MOBILE_LINKS = ALL_NAV_LINKS;
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,30 +73,52 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-12">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "text-[11px] font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:text-secondary relative group",
-                isScrolled ? "text-primary" : "text-white"
-              )}
-            >
-              <span>{link.name}</span>
-              <span className={cn(
-                "absolute -bottom-1 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
-                isScrolled ? "bg-secondary" : "bg-white"
-              )} />
-            </Link>
-          ))}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
+          {ALL_NAV_LINKS.map((link) => {
+            const linkClassName = cn(
+              "text-[11px] tracking-[0.25em] font-bold uppercase transition-all duration-500 hover:text-secondary relative group whitespace-nowrap",
+              isScrolled ? "text-primary" : "text-white"
+            );
+
+            if (link.external) {
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClassName}
+                >
+                  <span>{link.name}</span>
+                  <span className={cn(
+                    "absolute -bottom-1 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
+                    isScrolled ? "bg-secondary" : "bg-white"
+                  )} />
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={linkClassName}
+              >
+                <span>{link.name}</span>
+                <span className={cn(
+                  "absolute -bottom-1 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
+                  isScrolled ? "bg-secondary" : "bg-white"
+                )} />
+              </Link>
+            );
+          })}
         </nav>
 
-        <div className="flex items-center gap-6 md:gap-10">
+        <div className="flex items-center gap-3">
           <Link
             href="/emergency"
             className={cn(
-              "group flex items-center gap-3 px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500",
+              "group flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-500",
               isScrolled || isMenuOpen
                 ? "bg-primary text-white hover:bg-secondary hover:shadow-lg" 
                 : "bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white hover:text-primary"
@@ -101,7 +133,7 @@ export function Header() {
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={cn(
-              "lg:hidden p-3 rounded-xl transition-all duration-500",
+              "lg:hidden p-2.5 rounded-xl transition-all duration-500",
               isScrolled || isMenuOpen ? "text-primary bg-primary/5" : "text-white bg-white/10 backdrop-blur-md"
             )}
           >
@@ -121,21 +153,34 @@ export function Header() {
             className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b border-primary/5 overflow-hidden shadow-2xl"
           >
             <div className="container-custom py-16 flex flex-col gap-10">
-              {NAV_LINKS.map((link, index) => (
+              {MOBILE_LINKS.map((link, index) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="group flex items-center justify-between text-3xl font-bold text-primary hover:text-secondary transition-all"
-                  >
-                    <span>{link.name}</span>
-                    <div className="w-12 h-px bg-primary/10 group-hover:bg-secondary group-hover:w-20 transition-all" />
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="group flex items-center justify-between font-bold text-primary hover:text-secondary transition-all text-3xl"
+                    >
+                      <span>{link.name}</span>
+                      <div className="w-12 h-px bg-primary/10 group-hover:bg-secondary group-hover:w-20 transition-all" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="group flex items-center justify-between font-bold text-primary hover:text-secondary transition-all text-3xl"
+                    >
+                      <span>{link.name}</span>
+                      <div className="w-12 h-px bg-primary/10 group-hover:bg-secondary group-hover:w-20 transition-all" />
+                    </Link>
+                  )}
                 </motion.div>
               ))}
               
