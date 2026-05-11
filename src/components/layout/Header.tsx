@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
 const NAV_LINKS = [
-  { name: "Legacy", href: "/about" },
-  { name: "Expertise", href: "/departments" },
-  { name: "Specialists", href: "/doctors" },
+  { name: "About", href: "/about" },
+  { name: "Departments", href: "/departments" },
+  { name: "Our Doctors", href: "/doctors" },
   { name: "Care", href: "/services" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
