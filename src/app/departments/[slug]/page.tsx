@@ -33,7 +33,7 @@ export default async function DepartmentDetailPage({ params }: Props) {
         subtitle={dept.desc}
         image={dept.image}
         breadcrumbs={[
-          { label: "Expertise", href: "/departments" },
+          { label: "Departments", href: "/departments" },
           { label: dept.name }
         ]}
       />

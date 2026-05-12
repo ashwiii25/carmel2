@@ -9,6 +9,7 @@ interface SectionHeaderProps {
   description?: string;
   align?: "left" | "center";
   className?: string;
+  titleClassName?: string;
 }
 
 export function SectionHeader({
@@ -17,6 +18,7 @@ export function SectionHeader({
   description,
   align = "left",
   className,
+  titleClassName,
 }: SectionHeaderProps) {
   return (
     <div 
@@ -41,7 +43,10 @@ export function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight tracking-tight text-primary"
+        className={cn(
+          "text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight tracking-tight text-primary",
+          titleClassName
+        )}
       >
         {title}
       </motion.h2>

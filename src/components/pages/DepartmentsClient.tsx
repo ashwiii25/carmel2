@@ -4,17 +4,50 @@ import { CinematicHero } from "@/components/shared/CinematicHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { departments } from "@/data/departments";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const INFRA_IMAGES = [
+  {
+    src: "/hero_slideshow/8c46e278d48667f791c5650e5e9548e128e758c2-3840x2560.webp",
+    alt: "Advanced diagnostics lab",
+  },
+  {
+    src: "/hero_slideshow/ed8f1c912abec340f3e692008c2999b1e5bfee2e-3840x2560.webp",
+    alt: "Modern imaging center",
+  },
+  {
+    src: "/hero_slideshow/pexels-cedric-fauntleroy-4270086.webp",
+    alt: "Clinical infrastructure",
+  },
+];
 
 export function DepartmentsClient() {
+  const [infraIndex, setInfraIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setInfraIndex((prev) => (prev + 1) % INFRA_IMAGES.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePrevInfra = () => {
+    setInfraIndex((prev) => (prev - 1 + INFRA_IMAGES.length) % INFRA_IMAGES.length);
+  };
+
+  const handleNextInfra = () => {
+    setInfraIndex((prev) => (prev + 1) % INFRA_IMAGES.length);
+  };
+
   return (
     <main className="bg-background">
       <CinematicHero 
         title="Centres of Excellence."
         subtitle="Specialized medical departments powered by advanced technology and deep-rooted human compassion."
         image="/hero_slideshow/pexels-cedric-fauntleroy-4270086.webp"
-        breadcrumbs={[{ label: "Centres" }]}
+        breadcrumbs={[{ label: "Departments" }]}
         actions={[
           { label: "Our Expertise", href: "#expertise" }
         ]}
@@ -89,6 +122,7 @@ export function DepartmentsClient() {
                 kicker="Infrastructure"
                 title="Advanced diagnostic support."
                 description="Our NABL-accredited laboratories and advanced imaging centers provide the foundation for accurate medical decisions."
+                titleClassName="text-white"
                 className="mb-12"
               />
               <div className="flex flex-wrap gap-12 mt-12">
@@ -109,8 +143,40 @@ export function DepartmentsClient() {
               </div>
             </motion.div>
             <div className="relative">
-              <div className="img-reveal rounded-3xl aspect-video shadow-2xl border border-white/10 overflow-hidden">
-                <img src="/hero_slideshow/8c46e278d48667f791c5650e5e9548e128e758c2-3840x2560.webp" alt="Diagnostics" className="w-full h-full object-cover" />
+              <div className="img-reveal rounded-3xl aspect-[4/3] lg:aspect-[5/4] shadow-2xl border border-white/10 overflow-hidden relative">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={INFRA_IMAGES[infraIndex].src}
+                    src={INFRA_IMAGES[infraIndex].src}
+                    alt={INFRA_IMAGES[infraIndex].alt}
+                    initial={{ opacity: 0, scale: 1.02 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.01 }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </AnimatePresence>
+              </div>
+              <div className="mt-6 flex items-center justify-between gap-6">
+                <button
+                  type="button"
+                  onClick={handlePrevInfra}
+                  className="w-12 h-12 inline-flex items-center justify-center text-white/80 border border-white/20 rounded-full hover:border-secondary hover:text-white transition-all duration-300"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
+                  {infraIndex + 1} / {INFRA_IMAGES.length}
+                </div>
+                <button
+                  type="button"
+                  onClick={handleNextInfra}
+                  className="w-12 h-12 inline-flex items-center justify-center text-white/80 border border-white/20 rounded-full hover:border-secondary hover:text-white transition-all duration-300"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </div>
           </div>

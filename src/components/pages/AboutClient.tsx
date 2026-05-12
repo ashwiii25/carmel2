@@ -36,7 +36,7 @@ export function AboutClient() {
         title="A Legacy of Human Care & Medical Excellence."
         subtitle="Discover the story behind Aluva's premier medical institution — where advanced science meets the warmth of healing."
         image="/hero_slideshow/eb-website-image-hero-3840x2560.webp"
-        breadcrumbs={[{ label: "Legacy" }]}
+        breadcrumbs={[{ label: "About Us" }]}
         actions={[
           { label: "Our Story", href: "#philosophy" }
         ]}
@@ -155,7 +155,17 @@ export function AboutClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary text-white text-center overflow-hidden relative border-t border-white/5">
+      <section className="section-padding text-white text-center overflow-hidden relative border-t border-white/5">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_slideshow/pexels-cedric-fauntleroy-4270086.webp"
+            alt="Hospital care"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-primary" style={{ opacity: 0.32 }} />
+        </div>
         <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -169,15 +179,14 @@ export function AboutClient() {
             <div className="flex flex-wrap items-center justify-center gap-12">
               <Link 
                 href="/contact" 
-                className="group flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.3em] px-10 py-5 border border-white/20 hover:border-secondary transition-all duration-500 rounded-full"
+                className="group flex items-center gap-4 text-[11px] font-black uppercase tracking-[0.3em] px-10 py-5 bg-primary text-white border border-primary hover:bg-secondary hover:border-secondary transition-all duration-500 rounded-full shadow-xl"
               >
                 <span>Get in Touch</span>
-                <div className="w-8 h-px bg-white/20 group-hover:bg-secondary group-hover:w-12 transition-all duration-500" />
+                <div className="w-8 h-px bg-white/30 group-hover:bg-white group-hover:w-12 transition-all duration-500" />
               </Link>
             </div>
           </motion.div>
         </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[120px] -z-0 opacity-50" />
       </section>
     </main>
   );

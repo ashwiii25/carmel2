@@ -7,55 +7,49 @@ import { X, ZoomIn } from "lucide-react";
 import { CinematicHero } from "@/components/shared/CinematicHero";
 
 const galleryImages = [
-  ...[
-    "Anaesthesia-580x360.webp",
-    "Blood-Bank-580x360.webp",
-    "Cardiology-580x360.webp",
-    "CCU-580x360.webp",
-    "Clinical-Psychology-580x360.webp",
-    "Dental-580x360.webp",
-    "Dermatology-580x360.webp",
-    "Dialysis-580x360.webp",
-    "Emergency-Medicine-580x360.webp",
-    "ENT-580x360.webp",
-    "Finance-1-580x360.webp",
-    "General-Medicine-580x360.webp",
-    "General-Surgery-580x360.webp",
-    "Gynaecology-580x360.webp",
-    "Hematology-Lab-580x360.webp",
-    "Intensive-Care-Units-580x360.webp",
-    "Laparoscopic-Surgery-580x360.webp",
-    "Managing-Board-580x360.webp",
-    "MICU-580x360.webp",
-    "NICU-580x360.webp",
-    "Nursing-Department-580x360.webp",
-    "Ophthalmology-580x360.webp",
-    "Orthopaedics-580x360.webp",
-    "Paediatrics-580x360.webp",
-    "Pharmacy-580x360.webp",
-    "Physiotherapy-580x360.webp",
-    "PICU-580x360.webp",
-    "Psychiatry-580x360.webp",
-    "Radiology-580x360.webp"
-  ].map(img => ({ src: `/carmel_dept/${img}`, title: img.replace('-580x360.webp', '').replace(/-/g, ' '), category: "Departments" })),
-  ...[
-    "8c46e278d48667f791c5650e5e9548e128e758c2-3840x2560.webp",
-    "9ead531de00e67864a3153c298b4a2ebdbceef72-3840x2560.webp",
-    "eb-website-image-hero-3840x2560.webp",
-    "ed8f1c912abec340f3e692008c2999b1e5bfee2e-3840x2560.webp",
-    "ey-doctors-in-discussion-in-hospital.webp",
-    "hospital_emergency_room_view003.webp",
-    "pexels-cedric-fauntleroy-4270086.webp",
-    "pexels-imadclicks-14558557.webp",
-    "unnamed-file-3840x2560.webp"
-  ].map(img => ({ src: `/hero_slideshow/${img}`, title: "Hospital View", category: "Facilities" }))
-];
+  { file: "Anaesthesia-580x360.webp", category: "Clinical Care" },
+  { file: "Cardiology-580x360.webp", category: "Clinical Care" },
+  { file: "Clinical-Psychology-580x360.webp", category: "Clinical Care" },
+  { file: "Dermatology-580x360.webp", category: "Clinical Care" },
+  { file: "General-Medicine-580x360.webp", category: "Clinical Care" },
+  { file: "General-Surgery-580x360.webp", category: "Clinical Care" },
+  { file: "Gynaecology-580x360.webp", category: "Clinical Care" },
+  { file: "Ophthalmology-580x360.webp", category: "Clinical Care" },
+  { file: "Orthopaedics-580x360.webp", category: "Clinical Care" },
+  { file: "Paediatrics-580x360.webp", category: "Clinical Care" },
+  { file: "Psychiatry-580x360.webp", category: "Clinical Care" },
+
+  { file: "CCU-580x360.webp", category: "Critical Care" },
+  { file: "Emergency-Medicine-580x360.webp", category: "Critical Care" },
+  { file: "Intensive-Care-Units-580x360.webp", category: "Critical Care" },
+  { file: "MICU-580x360.webp", category: "Critical Care" },
+  { file: "NICU-580x360.webp", category: "Critical Care" },
+  { file: "PICU-580x360.webp", category: "Critical Care" },
+
+  { file: "Hematology-Lab-580x360.webp", category: "Diagnostics" },
+  { file: "Radiology-580x360.webp", category: "Diagnostics" },
+
+  { file: "Blood-Bank-580x360.webp", category: "Support Services" },
+  { file: "Dental-580x360.webp", category: "Support Services" },
+  { file: "Dialysis-580x360.webp", category: "Support Services" },
+  { file: "ENT-580x360.webp", category: "Support Services" },
+  { file: "Laparoscopic-Surgery-580x360.webp", category: "Support Services" },
+  { file: "Nursing-Department-580x360.webp", category: "Support Services" },
+  { file: "Pharmacy-580x360.webp", category: "Support Services" },
+  { file: "Physiotherapy-580x360.webp", category: "Support Services" },
+  { file: "Finance-1-580x360.webp", category: "Support Services" },
+  { file: "Managing-Board-580x360.webp", category: "Support Services" }
+].map(({ file, category }) => ({
+  src: `/carmel_dept/${file}`,
+  title: file.replace('-580x360.webp', '').replace(/-/g, ' '),
+  category
+}));
 
 export function GalleryClient() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", ...Array.from(new Set(galleryImages.map((img) => img.category)))];
+  const categories = ["All", "Clinical Care", "Critical Care", "Diagnostics", "Support Services"];
 
   const filteredImages = filter === "All" ? galleryImages : galleryImages.filter(img => img.category === filter);
 
@@ -76,10 +70,10 @@ export function GalleryClient() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
                 filter === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-primary/20"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-primary border-primary/15 hover:border-primary/40"
               }`}
             >
               {category}

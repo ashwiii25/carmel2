@@ -34,7 +34,7 @@ export default async function DoctorProfilePage({ params }: Props) {
         subtitle={`${doc.speciality} · ${doc.experience} Experience`}
         image={dept?.image || "/carmel_bg.jpg"}
         breadcrumbs={[
-          { label: "Specialists", href: "/doctors" },
+          { label: "Doctors", href: "/doctors" },
           { label: doc.name }
         ]}
       />
@@ -90,14 +90,6 @@ export default async function DoctorProfilePage({ params }: Props) {
                   )}
                 </div>
 
-                <div className="mt-16 pt-16 border-t border-primary/5">
-                  <a 
-                    href="tel:+914842901000" 
-                    className="w-full inline-block text-center py-5 bg-primary text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full hover:bg-secondary transition-colors duration-500 shadow-xl"
-                  >
-                    Request Appointment
-                  </a>
-                </div>
               </div>
             </aside>
 

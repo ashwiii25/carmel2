@@ -29,7 +29,7 @@ export function DoctorsClient() {
         title="Our World-Class Specialists."
         subtitle="Meet the experts dedicated to your well-being. Board-certified clinicians with deep-rooted compassion."
         image="/hero_slideshow/ey-doctors-in-discussion-in-hospital.webp"
-        breadcrumbs={[{ label: "Specialists" }]}
+        breadcrumbs={[{ label: "Doctors" }]}
         actions={[
           { label: "Find Specialist", href: "#specialists" }
         ]}

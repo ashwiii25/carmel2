@@ -9,7 +9,13 @@ export function Emergency() {
   return (
     <section className="relative h-[500px] md:h-[600px] overflow-hidden bg-black text-white">
       <div className="absolute inset-0 z-0">
-        <Image src="/carmel_dept/Emergency-Medicine-580x360.webp" alt="Emergency" fill sizes="100vw" className="object-cover opacity-60" />
+        <Image src="/carmel_dept/Emergency-Medicine-580x360.webp" alt="Emergency" fill sizes="100vw" className="object-cover" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "radial-gradient(circle at center, rgba(139, 0, 0, 0.43) 0%, rgba(139, 0, 0, 0.43) 55%, rgba(20, 0, 0, 0.7) 100%)",
+          }}
+        />
       </div>
 
       <div className="container-custom relative z-10 h-full flex items-center">
